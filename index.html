@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="pt-br" class="scroll-smooth">
+<html lang="pt-br" class="scroll-smooth" data-lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gabriel Milhardo | Analista de Dados & Machine Learning Engineer</title>
+    <title data-translate="pageTitle">Gabriel Milhardo | Analista de Dados & Machine Learning Engineer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome for flags -->
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <style>
@@ -25,6 +26,21 @@
         .typing-cursor {
             border-right: .15em solid #38bdf8;
         }
+        /* Custom scrollbar for chat */
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 8px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #374151;
+            border-radius: 10px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #6B7280;
+            border-radius: 10px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #9CA3AF;
+        }
     </style>
 </head>
 <body class="w-full">
@@ -34,24 +50,34 @@
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="text-2xl font-bold text-white">Gabriel Milhardo</a>
             <nav class="hidden md:flex space-x-8">
-                <a href="#about" class="text-gray-300 hover:text-sky-400 transition">Sobre</a>
-                <a href="#experience" class="text-gray-300 hover:text-sky-400 transition">Experiência</a>
-                <a href="#skills" class="text-gray-300 hover:text-sky-400 transition">Competências</a>
-                <a href="#projects" class="text-gray-300 hover:text-sky-400 transition">Projetos</a>
-                <a href="#contact" class="text-gray-300 hover:text-sky-400 transition">Contato</a>
+                <a href="#about" class="text-gray-300 hover:text-sky-400 transition" data-translate="navAbout">Sobre</a>
+                <a href="#experience" class="text-gray-300 hover:text-sky-400 transition" data-translate="navExperience">Experiência</a>
+                <a href="#skills" class="text-gray-300 hover:text-sky-400 transition" data-translate="navSkills">Competências</a>
+                <a href="#projects" class="text-gray-300 hover:text-sky-400 transition" data-translate="navProjects">Projetos</a>
+                <a href="#contact" class="text-gray-300 hover:text-sky-400 transition" data-translate="navContact">Contato</a>
             </nav>
-            <button id="mobile-menu-button" class="md:hidden text-white">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                </svg>
-            </button>
+            <div class="flex items-center space-x-4">
+                <div class="language-switcher flex space-x-2">
+                    <button id="lang-pt" class="focus:outline-none">
+                        <img src="https://flagcdn.com/w20/br.png" srcset="https://flagcdn.com/w40/br.png 2x" width="20" alt="Português" class="rounded shadow-md">
+                    </button>
+                    <button id="lang-en" class="focus:outline-none">
+                        <img src="https://flagcdn.com/w20/us.png" srcset="https://flagcdn.com/w40/us.png 2x" width="20" alt="English" class="rounded shadow-md">
+                    </button>
+                </div>
+                <button id="mobile-menu-button" class="md:hidden text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
         </div>
         <div id="mobile-menu" class="hidden md:hidden">
-            <a href="#about" class="block py-2 px-4 text-sm text-gray-300 hover:bg-gray-700">Sobre</a>
-            <a href="#experience" class="block py-2 px-4 text-sm text-gray-300 hover:bg-gray-700">Experiência</a>
-            <a href="#skills" class="block py-2 px-4 text-sm text-gray-300 hover:bg-gray-700">Competências</a>
-            <a href="#projects" class="block py-2 px-4 text-sm text-gray-300 hover:bg-gray-700">Projetos</a>
-            <a href="#contact" class="block py-2 px-4 text-sm text-gray-300 hover:bg-gray-700">Contato</a>
+            <a href="#about" class="block py-2 px-4 text-sm text-gray-300 hover:bg-gray-700" data-translate="navAbout">Sobre</a>
+            <a href="#experience" class="block py-2 px-4 text-sm text-gray-300 hover:bg-gray-700" data-translate="navExperience">Experiência</a>
+            <a href="#skills" class="block py-2 px-4 text-sm text-gray-300 hover:bg-gray-700" data-translate="navSkills">Competências</a>
+            <a href="#projects" class="block py-2 px-4 text-sm text-gray-300 hover:bg-gray-700" data-translate="navProjects">Projetos</a>
+            <a href="#contact" class="block py-2 px-4 text-sm text-gray-300 hover:bg-gray-700" data-translate="navContact">Contato</a>
         </div>
     </header>
 
@@ -59,14 +85,14 @@
         <!-- Hero Section -->
         <section id="hero" class="min-h-screen flex flex-col justify-center items-center text-center">
             <h1 class="text-5xl md:text-7xl font-bold text-white reveal">Gabriel Milhardo</h1>
-            <h2 class="text-2xl md:text-4xl mt-4 text-sky-400 font-semibold reveal">
+            <h2 class="text-2xl md:text-4xl mt-4 text-sky-400 font-semibold reveal" data-translate="heroTitle">
                 Analista de Dados & Machine Learning Engineer
             </h2>
             <p class="text-lg md:text-xl mt-4 text-gray-300 reveal">
                 <span id="typing-effect"></span>
             </p>
             <div class="mt-8 flex flex-wrap justify-center gap-4 reveal">
-                <a href="#projects" class="bg-sky-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-sky-600 transition-transform transform hover:scale-105">
+                <a href="#projects" class="bg-sky-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-sky-600 transition-transform transform hover:scale-105" data-translate="viewProjectsBtn">
                     Ver Projetos
                 </a>
                 <a href="https://www.linkedin.com/in/gabriel-milhardo-7b1232243/?trk=opento_sprofile_details" target="_blank" class="bg-gray-700 text-white font-bold py-3 px-6 rounded-lg hover:bg-gray-600 transition-transform transform hover:scale-105 flex items-center gap-2">
@@ -80,12 +106,12 @@
 
         <!-- About Section -->
         <section id="about" class="py-20">
-            <h2 class="text-4xl font-bold text-center text-white mb-12 reveal">Sobre Mim</h2>
+            <h2 class="text-4xl font-bold text-center text-white mb-12 reveal" data-translate="aboutTitle">Sobre Mim</h2>
             <div class="max-w-4xl mx-auto text-lg text-gray-300 text-center leading-relaxed reveal">
-                <p>
+                <p data-translate="aboutP1">
                     Analista de Dados e IA com forte background em Engenharia de Software e Cloud. Com mais de 3 anos de experiência, sou proficiente em Python para análise e modelagem, e experiente na construção e consumo de APIs RESTful.
                 </p>
-                <p class="mt-4">
+                <p class="mt-4" data-translate="aboutP2">
                     Possuo vivência prática com o deployment de aplicações (Node.js) em ambientes de produção na AWS (EC2, S3), demonstrando capacidade de gerenciar o ciclo de vida de uma solução de ponta a ponta. Com fluência profissional em inglês, comprovada na condução de projetos técnicos com stakeholders internacionais, busco ativamente posições de Machine Learning Engineer ou Data Scientist onde possa aplicar essa visão integrada para construir e produtizar soluções de dados em escala.
                 </p>
             </div>
@@ -93,17 +119,17 @@
 
         <!-- Experience Section -->
         <section id="experience" class="py-20">
-            <h2 class="text-4xl font-bold text-center text-white mb-16 reveal">Jornada Profissional</h2>
+            <h2 class="text-4xl font-bold text-center text-white mb-16 reveal" data-translate="experienceTitle">Jornada Profissional</h2>
             <div class="relative max-w-4xl mx-auto">
                 <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gray-700"></div>
                 <div class="space-y-16">
                     <!-- Experience Item 1 -->
                     <div class="flex items-center w-full reveal">
                         <div class="w-1/2 pr-8 text-right">
-                            <p class="text-sky-400 font-semibold">Abril 2025 – Presente</p>
-                            <h3 class="text-xl font-bold text-white mt-1">Analista de Dados e Inteligência Artificial</h3>
-                            <p class="text-gray-400">Surf Telecom</p>
-                            <p class="text-sm mt-2 text-gray-300">Liderei o desenvolvimento de uma plataforma web para visualização estratégica de KPIs de chamadas de voz, utilizando Python para extração e tratamento de dados (CDR) e JavaScript para o front-end. Implementei uma solução de monitoramento em tempo real (near real-time) para a gestão de rede.</p>
+                            <p class="text-sky-400 font-semibold" data-translate="exp1Date">Abril 2025 – Presente</p>
+                            <h3 class="text-xl font-bold text-white mt-1" data-translate="exp1Role">Analista de Dados e Inteligência Artificial</h3>
+                            <p class="text-gray-400" data-translate="exp1Company">Surf Telecom</p>
+                            <p class="text-sm mt-2 text-gray-300" data-translate="exp1Desc">Liderei o desenvolvimento de uma plataforma web para visualização estratégica de KPIs de chamadas de voz, utilizando Python para extração e tratamento de dados (CDR) e JavaScript para o front-end. Implementei uma solução de monitoramento em tempo real (near real-time) para a gestão de rede.</p>
                         </div>
                         <div class="w-1/12 flex justify-center">
                             <div class="w-4 h-4 bg-sky-500 rounded-full z-10"></div>
@@ -117,19 +143,19 @@
                             <div class="w-4 h-4 bg-sky-500 rounded-full z-10"></div>
                         </div>
                         <div class="w-1/2 pl-8 text-left">
-                            <p class="text-sky-400 font-semibold">Maio 2023 – Abril 2025</p>
-                            <h3 class="text-xl font-bold text-white mt-1">Analista de Projetos</h3>
-                            <p class="text-gray-400">Surf Telecom</p>
-                            <p class="text-sm mt-2 text-gray-300">Gerenciei a implantação de uma nova plataforma de mensageria (SMS), integrando brokers nacionais e internacionais. Conduzi alinhamentos técnicos e negociações de escopo com parceiros e clientes globais em inglês.</p>
+                            <p class="text-sky-400 font-semibold" data-translate="exp2Date">Maio 2023 – Abril 2025</p>
+                            <h3 class="text-xl font-bold text-white mt-1" data-translate="exp2Role">Analista de Projetos</h3>
+                            <p class="text-gray-400" data-translate="exp2Company">Surf Telecom</p>
+                            <p class="text-sm mt-2 text-gray-300" data-translate="exp2Desc">Gerenciei a implantação de uma nova plataforma de mensageria (SMS), integrando brokers nacionais e internacionais. Conduzi alinhamentos técnicos e negociações de escopo com parceiros e clientes globais em inglês.</p>
                         </div>
                     </div>
                     <!-- Experience Item 3 -->
                     <div class="flex items-center w-full reveal">
                         <div class="w-1/2 pr-8 text-right">
-                            <p class="text-sky-400 font-semibold">Abril 2022 – Maio 2023</p>
-                            <h3 class="text-xl font-bold text-white mt-1">Desenvolvedor</h3>
-                            <p class="text-gray-400">Surf Telecom</p>
-                            <p class="text-sm mt-2 text-gray-300">Desenvolvi múltiplos scripts em Python para coleta automatizada de dados, incluindo web scraping e tratamento de dados. Atuei na construção de APIs em Node.js para suportar sistemas internos.</p>
+                            <p class="text-sky-400 font-semibold" data-translate="exp3Date">Abril 2022 – Maio 2023</p>
+                            <h3 class="text-xl font-bold text-white mt-1" data-translate="exp3Role">Desenvolvedor</h3>
+                            <p class="text-gray-400" data-translate="exp3Company">Surf Telecom</p>
+                            <p class="text-sm mt-2 text-gray-300" data-translate="exp3Desc">Desenvolvi múltiplos scripts em Python para coleta automatizada de dados, incluindo web scraping e tratamento de dados. Atuei na construção de APIs em Node.js para suportar sistemas internos.</p>
                         </div>
                         <div class="w-1/12 flex justify-center">
                             <div class="w-4 h-4 bg-sky-500 rounded-full z-10"></div>
@@ -142,11 +168,11 @@
 
         <!-- Skills Section -->
         <section id="skills" class="py-20">
-            <h2 class="text-4xl font-bold text-center text-white mb-12 reveal">Minhas Ferramentas</h2>
+            <h2 class="text-4xl font-bold text-center text-white mb-12 reveal" data-translate="skillsTitle">Minhas Ferramentas</h2>
             <div class="max-w-6xl mx-auto">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div class="bg-gray-800 p-6 rounded-lg reveal">
-                        <h3 class="text-2xl font-bold text-white mb-4">Linguagens</h3>
+                        <h3 class="text-2xl font-bold text-white mb-4" data-translate="langCategory">Linguagens</h3>
                         <div class="flex flex-wrap gap-4">
                             <span class="flex items-center gap-2 bg-gray-700 text-white py-2 px-4 rounded-lg"><i class="devicon-python-plain text-2xl"></i> Python</span>
                             <span class="flex items-center gap-2 bg-gray-700 text-white py-2 px-4 rounded-lg"><i class="devicon-sqldeveloper-plain text-2xl"></i> SQL</span>
@@ -155,7 +181,7 @@
                         </div>
                     </div>
                     <div class="bg-gray-800 p-6 rounded-lg reveal">
-                        <h3 class="text-2xl font-bold text-white mb-4">Dados, IA & BI</h3>
+                        <h3 class="text-2xl font-bold text-white mb-4" data-translate="dataAICategory">Dados, IA & BI</h3>
                         <div class="flex flex-wrap gap-4">
                             <span class="flex items-center gap-2 bg-gray-700 text-white py-2 px-4 rounded-lg"><i class="devicon-pandas-original text-2xl"></i> Pandas</span>
                             <span class="flex items-center gap-2 bg-gray-700 text-white py-2 px-4 rounded-lg"><i class="devicon-scikitlearn-plain text-2xl"></i> Scikit-Learn</span>
@@ -164,7 +190,7 @@
                         </div>
                     </div>
                     <div class="bg-gray-800 p-6 rounded-lg reveal">
-                        <h3 class="text-2xl font-bold text-white mb-4">Engenharia de Software</h3>
+                        <h3 class="text-2xl font-bold text-white mb-4" data-translate="softwareEngCategory">Engenharia de Software</h3>
                         <div class="flex flex-wrap gap-4">
                             <span class="bg-gray-700 text-white py-2 px-4 rounded-lg">APIs RESTful</span>
                             <span class="flex items-center gap-2 bg-gray-700 text-white py-2 px-4 rounded-lg"><i class="devicon-git-plain text-2xl"></i> Git</span>
@@ -172,23 +198,23 @@
                         </div>
                     </div>
                     <div class="bg-gray-800 p-6 rounded-lg reveal">
-                        <h3 class="text-2xl font-bold text-white mb-4">Cloud & DevOps</h3>
+                        <h3 class="text-2xl font-bold text-white mb-4" data-translate="cloudDevOpsCategory">Cloud & DevOps</h3>
                         <div class="flex flex-wrap gap-4">
                             <span class="flex items-center gap-2 bg-gray-700 text-white py-2 px-4 rounded-lg"><i class="devicon-amazonwebservices-original text-2xl"></i> AWS (EC2, S3)</span>
                             <span class="flex items-center gap-2 bg-gray-700 text-white py-2 px-4 rounded-lg"><i class="devicon-docker-plain text-2xl"></i> Docker</span>
                         </div>
                     </div>
                     <div class="bg-gray-800 p-6 rounded-lg reveal">
-                        <h3 class="text-2xl font-bold text-white mb-4">Bancos de Dados</h3>
+                        <h3 class="text-2xl font-bold text-white mb-4" data-translate="databasesCategory">Bancos de Dados</h3>
                         <div class="flex flex-wrap gap-4">
                             <span class="flex items-center gap-2 bg-gray-700 text-white py-2 px-4 rounded-lg"><i class="devicon-mysql-plain text-2xl"></i> MySQL</span>
                         </div>
                     </div>
                     <div class="bg-gray-800 p-6 rounded-lg reveal">
-                        <h3 class="text-2xl font-bold text-white mb-4">Idiomas</h3>
+                        <h3 class="text-2xl font-bold text-white mb-4" data-translate="languagesCategory">Idiomas</h3>
                         <div class="flex flex-wrap gap-4">
-                            <span class="bg-gray-700 text-white py-2 px-4 rounded-lg">Inglês (Fluente)</span>
-                            <span class="bg-gray-700 text-white py-2 px-4 rounded-lg">Português (Nativo)</span>
+                            <span class="bg-gray-700 text-white py-2 px-4 rounded-lg" data-translate="englishSkill">Inglês (Fluente)</span>
+                            <span class="bg-gray-700 text-white py-2 px-4 rounded-lg" data-translate="portugueseSkill">Português (Nativo)</span>
                         </div>
                     </div>
                 </div>
@@ -197,18 +223,18 @@
 
         <!-- Projects Section -->
         <section id="projects" class="py-20">
-            <h2 class="text-4xl font-bold text-center text-white mb-12 reveal">Portfólio de Projetos</h2>
+            <h2 class="text-4xl font-bold text-center text-white mb-12 reveal" data-translate="projectsTitle">Portfólio de Projetos</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                 <!-- Project 1 -->
                 <div class="bg-gray-800 rounded-lg overflow-hidden group transform hover:scale-105 transition-transform duration-300 reveal">
                     <img src="https://placehold.co/600x400/1f2937/ffffff?text=API+Code" alt="API de Classificação de Risco de Crédito" class="w-full h-56 object-cover">
                     <div class="p-6">
-                        <h3 class="text-2xl font-bold text-white">API de Classificação de Risco de Crédito</h3>
-                        <p class="mt-2 text-gray-300">Uma API containerizada com Docker que utiliza um modelo de Machine Learning para prever o risco de crédito de clientes.</p>
-                        <p class="mt-4 text-sm text-sky-400">Tecnologias: Python, FastAPI, Scikit-Learn, Docker.</p>
+                        <h3 class="text-2xl font-bold text-white" data-translate="project1Title">API de Classificação de Risco de Crédito</h3>
+                        <p class="mt-2 text-gray-300" data-translate="project1Desc">Uma API containerizada com Docker que utiliza um modelo de Machine Learning para prever o risco de crédito de clientes.</p>
+                        <p class="mt-4 text-sm text-sky-400" data-translate="project1Tech">Tecnologias: Python, FastAPI, Scikit-Learn, Docker.</p>
                         <div class="mt-6 flex gap-4">
-                            <a href="https://github.com/GabrielMilhardo1" target="_blank" class="bg-sky-500 text-white py-2 px-4 rounded-lg hover:bg-sky-600 transition">Ver no GitHub</a>
-                            <button disabled class="bg-gray-600 text-gray-400 py-2 px-4 rounded-lg cursor-not-allowed">Live Demo</button>
+                            <a href="https://github.com/GabrielMilhardo1" target="_blank" class="bg-sky-500 text-white py-2 px-4 rounded-lg hover:bg-sky-600 transition" data-translate="viewGithubBtn">Ver no GitHub</a>
+                            <button disabled class="bg-gray-600 text-gray-400 py-2 px-4 rounded-lg cursor-not-allowed" data-translate="liveDemoBtn">Live Demo</button>
                         </div>
                     </div>
                 </div>
@@ -216,9 +242,9 @@
                 <div class="bg-gray-800 rounded-lg overflow-hidden group transform hover:scale-105 transition-transform duration-300 reveal">
                     <img src="https://placehold.co/600x400/1f2937/ffffff?text=In+Development" alt="Projeto em Desenvolvimento" class="w-full h-56 object-cover">
                     <div class="p-6">
-                        <h3 class="text-2xl font-bold text-white">[A SER DEFINIDO]</h3>
-                        <p class="mt-2 text-gray-300">Projeto focado em MLOps e pipeline de dados na nuvem.</p>
-                        <p class="mt-4 text-sm text-yellow-400">Status: Em Desenvolvimento</p>
+                        <h3 class="text-2xl font-bold text-white" data-translate="project2Title">[A SER DEFINIDO]</h3>
+                        <p class="mt-2 text-gray-300" data-translate="project2Desc">Projeto focado em MLOps e pipeline de dados na nuvem.</p>
+                        <p class="mt-4 text-sm text-yellow-400" data-translate="project2Status">Status: Em Desenvolvimento</p>
                     </div>
                 </div>
             </div>
@@ -226,14 +252,14 @@
 
         <!-- Contact Section -->
         <section id="contact" class="py-20 text-center">
-            <h2 class="text-4xl font-bold text-white mb-6 reveal">Vamos Conversar?</h2>
-            <p class="text-lg text-gray-300 max-w-2xl mx-auto mb-8 reveal">
+            <h2 class="text-4xl font-bold text-white mb-6 reveal" data-translate="contactTitle">Vamos Conversar?</h2>
+            <p class="text-lg text-gray-300 max-w-2xl mx-auto mb-8 reveal" data-translate="contactText">
                 Estou aberto a novas oportunidades e parcerias. Sinta-se à vontade para entrar em contato.
             </p>
             <div class="flex justify-center items-center gap-6 flex-wrap reveal">
                 <a href="mailto:gabrielmilhardo@gmail.com" class="bg-gray-700 text-white font-bold py-4 px-8 rounded-lg hover:bg-sky-500 transition-colors transform hover:scale-105 flex items-center gap-3 text-lg">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                    E-mail
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    <span data-translate="emailBtn">E-mail</span>
                 </a>
                 <a href="https://www.linkedin.com/in/gabriel-milhardo-7b1232243/?trk=opento_sprofile_details" target="_blank" class="bg-gray-700 text-white font-bold py-4 px-8 rounded-lg hover:bg-sky-500 transition-colors transform hover:scale-105 flex items-center gap-3 text-lg">
                      <i class="devicon-linkedin-plain text-2xl"></i> LinkedIn
@@ -246,7 +272,7 @@
     </main>
 
     <footer class="text-center py-6 border-t border-gray-800">
-        <p class="text-gray-400">&copy; 2025 Gabriel Milhardo. Todos os direitos reservados.</p>
+        <p class="text-gray-400">&copy; 2025 Gabriel Milhardo. <span data-translate="allRightsReserved">Todos os direitos reservados.</span></p>
     </footer>
 
     <!-- Chatbot UI -->
@@ -257,7 +283,7 @@
 
         <div id="chatbot-window" class="hidden bg-gray-800 rounded-lg shadow-xl w-80 h-96 flex flex-col overflow-hidden">
             <div class="bg-gray-700 text-white p-4 flex justify-between items-center">
-                <h3 class="font-bold">Chatbot Gabriel</h3>
+                <h3 class="font-bold" data-translate="chatbotTitle">Chatbot Gabriel</h3>
                 <button id="chatbot-close" class="text-gray-300 hover:text-white focus:outline-none">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
                 </button>
@@ -265,11 +291,11 @@
             <div id="chat-messages" class="flex-1 p-4 overflow-y-auto text-sm custom-scrollbar">
                 <!-- Messages will appear here -->
                 <div class="flex justify-start mb-2">
-                    <div class="bg-gray-600 text-white p-2 rounded-lg max-w-[70%]">Olá! Sou o chatbot do Gabriel. Pergunte-me sobre ele!</div>
+                    <div class="bg-gray-600 text-white p-2 rounded-lg max-w-[70%]" data-translate="chatbotWelcome">Olá! Sou o chatbot do Gabriel. Pergunte-me sobre ele!</div>
                 </div>
             </div>
             <div class="p-4 border-t border-gray-700 flex">
-                <input type="text" id="chat-input" class="flex-1 bg-gray-700 text-white rounded-l-lg p-2 focus:outline-none focus:ring-2 focus:ring-sky-500" placeholder="Digite sua pergunta...">
+                <input type="text" id="chat-input" class="flex-1 bg-gray-700 text-white rounded-l-lg p-2 focus:outline-none focus:ring-2 focus:ring-sky-500" placeholder="Digite sua pergunta..." data-translate="chatPlaceholder">
                 <button id="chat-send" class="bg-sky-500 text-white p-2 rounded-r-lg hover:bg-sky-600 transition-colors focus:outline-none">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
                 </button>
@@ -278,6 +304,229 @@
     </div>
 
     <script>
+        // Translations object
+        const translations = {
+            pt: {
+                pageTitle: 'Gabriel Milhardo | Analista de Dados & Machine Learning Engineer',
+                navAbout: 'Sobre',
+                navExperience: 'Experiência',
+                navSkills: 'Competências',
+                navProjects: 'Projetos',
+                navContact: 'Contato',
+                heroTitle: 'Analista de Dados & Machine Learning Engineer',
+                typingStrings: ['Python', 'AWS', 'APIs RESTful', 'Global Experience'],
+                viewProjectsBtn: 'Ver Projetos',
+                aboutTitle: 'Sobre Mim',
+                aboutP1: 'Analista de Dados e IA com forte background em Engenharia de Software e Cloud. Com mais de 3 anos de experiência, sou proficiente em Python para análise e modelagem, e experiente na construção e consumo de APIs RESTful.',
+                aboutP2: 'Possuo vivência prática com o deployment de aplicações (Node.js) em ambientes de produção na AWS (EC2, S3), demonstrando capacidade de gerenciar o ciclo de vida de uma solução de ponta a ponta. Com fluência profissional em inglês, comprovada na condução de projetos técnicos com stakeholders internacionais, busco ativamente posições de Machine Learning Engineer ou Data Scientist onde possa aplicar essa visão integrada para construir e produtizar soluções de dados em escala.',
+                experienceTitle: 'Jornada Profissional',
+                exp1Date: 'Abril 2025 – Presente',
+                exp1Role: 'Analista de Dados e Inteligência Artificial',
+                exp1Company: 'Surf Telecom',
+                exp1Desc: 'Liderei o desenvolvimento de uma plataforma web para visualização estratégica de KPIs de chamadas de voz, utilizando Python para extração e tratamento de dados (CDR) e JavaScript para o front-end. Implementei uma solução de monitoramento em tempo real (near real-time) para a gestão de rede.',
+                exp2Date: 'Maio 2023 – Abril 2025',
+                exp2Role: 'Analista de Projetos',
+                exp2Company: 'Surf Telecom',
+                exp2Desc: 'Gerenciei a implantação de uma nova plataforma de mensageria (SMS), integrando brokers nacionais e internacionais. Conduzi alinhamentos técnicos e negociações de escopo com parceiros e clientes globais em inglês.',
+                exp3Date: 'Abril 2022 – Maio 2023',
+                exp3Role: 'Desenvolvedor',
+                exp3Company: 'Surf Telecom',
+                exp3Desc: 'Desenvolvi múltiplos scripts em Python para coleta automatizada de dados, incluindo web scraping e tratamento de dados. Atuei na construção de APIs em Node.js para suportar sistemas internos.',
+                skillsTitle: 'Minhas Ferramentas',
+                langCategory: 'Linguagens',
+                dataAICategory: 'Dados, IA & BI',
+                softwareEngCategory: 'Engenharia de Software',
+                cloudDevOpsCategory: 'Cloud & DevOps',
+                databasesCategory: 'Bancos de Dados',
+                languagesCategory: 'Idiomas',
+                englishSkill: 'Inglês (Fluente)',
+                portugueseSkill: 'Português (Nativo)',
+                projectsTitle: 'Portfólio de Projetos',
+                project1Title: 'API de Classificação de Risco de Crédito',
+                project1Desc: 'Uma API containerizada com Docker que utiliza um modelo de Machine Learning para prever o risco de crédito de clientes.',
+                project1Tech: 'Tecnologias: Python, FastAPI, Scikit-Learn, Docker.',
+                viewGithubBtn: 'Ver no GitHub',
+                liveDemoBtn: 'Live Demo',
+                project2Title: '[A SER DEFINIDO]',
+                project2Desc: 'Projeto focado em MLOps e pipeline de dados na nuvem.',
+                project2Status: 'Status: Em Desenvolvimento',
+                contactTitle: 'Vamos Conversar?',
+                contactText: 'Estou aberto a novas oportunidades e parcerias. Sinta-se à vontade para entrar em contato.',
+                emailBtn: 'E-mail',
+                allRightsReserved: 'Todos os direitos reservados.',
+                chatbotTitle: 'Chatbot Gabriel',
+                chatbotWelcome: 'Olá! Sou o chatbot do Gabriel. Pergunte-me sobre ele!',
+                chatPlaceholder: 'Digite sua pergunta...',
+                chatbotUnknown: 'Desculpe, não entendi sua pergunta. Tente perguntar sobre \'experiência\', \'habilidades\', \'projetos\' ou \'contato\'.',
+                kbName: 'O nome dele é Gabriel Milhardo.',
+                kbWhoIsGabriel: 'Gabriel Milhardo é Analista de Dados e IA com forte background em Engenharia de Software e Cloud, com mais de 3 anos de experiência.',
+                kbExperience: 'Ele tem experiência na Surf Telecom como Analista de Dados e IA, Analista de Projetos e Desenvolvedor.',
+                kbSurfTelecom: 'Na Surf Telecom, ele atuou como Analista de Dados e IA (Abril 2025 – Presente), Analista de Projetos (Maio 2023 – Abril 2025) e Desenvolvedor (Abril 2022 – Maio 2023).',
+                kbSkills: 'Suas habilidades incluem Python, SQL, Node.js, JavaScript, Pandas, Scikit-Learn, Power BI, NumPy, APIs RESTful, Git, Web Scraping, AWS (EC2, S3), Docker, MySQL, Inglês (Fluente) e Português (Nativo).',
+                kbCompetencies: 'Suas competências são em Linguagens (Python, SQL, Node.js, JavaScript), Dados, IA & BI (Pandas, Scikit-Learn, Power BI, NumPy), Engenharia de Software (APIs RESTful, Git, Web Scraping), Cloud & DevOps (AWS, Docker), Bancos de Dados (MySQL) e Idiomas (Inglês, Português).',
+                kbProjects: 'Ele tem um projeto de \'API de Classificação de Risco de Crédito\' e outro projeto \'Em Desenvolvimento\' focado em MLOps e pipeline de dados na nuvem.',
+                kbContact: 'Você pode entrar em contato com Gabriel por e-mail (gabrielmilhardo@gmail.com), LinkedIn (https://www.linkedin.com/in/gabriel-milhardo-7b1232243/) ou GitHub (https://github.com/GabrielMilhardo1).',
+                kbEmail: 'O e-mail de contato do Gabriel é gabrielmilhardo@gmail.com.',
+                kbLinkedIn: 'O LinkedIn do Gabriel é https://www.linkedin.com/in/gabriel-milhardo-7b1232243/.',
+                kbGitHub: 'O GitHub do Gabriel é https://github.com/GabrielMilhardo1.',
+                kbLocation: 'Gabriel está localizado em São Paulo, Brasil.',
+                kbEducation: 'As informações sobre formação não estão detalhadas na página atual.',
+                kbSalary: 'Não tenho informações sobre salário.',
+                kbAge: 'Não tenho informações sobre a idade de Gabriel.',
+                kbHello: 'Olá! Como posso ajudar?',
+                kbHi: 'Oi! Em que posso ser útil?',
+                kbHowAreYou: 'Tudo ótimo! E com você?',
+                kbThanks: 'De nada! Se precisar de mais alguma coisa, é só perguntar.',
+                kbGratitude: 'De nada! Se precisar de mais alguma coisa, é só perguntar.'
+            },
+            en: {
+                pageTitle: 'Gabriel Milhardo | Data Analyst & Machine Learning Engineer',
+                navAbout: 'About',
+                navExperience: 'Experience',
+                navSkills: 'Skills',
+                navProjects: 'Projects',
+                navContact: 'Contact',
+                heroTitle: 'Data Analyst & Machine Learning Engineer',
+                typingStrings: ['Python', 'AWS', 'RESTful APIs', 'Global Experience'],
+                viewProjectsBtn: 'View Projects',
+                aboutTitle: 'About Me',
+                aboutP1: 'Data and AI Analyst with a strong background in Software Engineering and Cloud. With over 3 years of experience, I am proficient in Python for analysis and modeling, and experienced in building and consuming RESTful APIs.',
+                aboutP2: 'I have practical experience with deploying applications (Node.js) in production environments on AWS (EC2, S3), demonstrating the ability to manage the end-to-end solution lifecycle. With professional fluency in English, proven in leading technical projects with international stakeholders, I actively seek Machine Learning Engineer or Data Scientist positions where I can apply this integrated vision to build and productize data solutions at scale.',
+                experienceTitle: 'Professional Journey',
+                exp1Date: 'April 2025 – Present',
+                exp1Role: 'Data and Artificial Intelligence Analyst',
+                exp1Company: 'Surf Telecom',
+                exp1Desc: 'Led the development of a web platform for strategic visualization of voice call KPIs, using Python for data extraction and processing (CDR) and JavaScript for the front-end. Implemented a real-time (near real-time) monitoring solution for network management.',
+                exp2Date: 'May 2023 – April 2025',
+                exp2Role: 'Project Analyst',
+                exp2Company: 'Surf Telecom',
+                exp2Desc: 'Managed the implementation of a new messaging platform (SMS), integrating national and international brokers. Conducted technical alignments and scope negotiations with global partners and clients in English.',
+                exp3Date: 'April 2022 – May 2023',
+                exp3Role: 'Developer',
+                exp3Company: 'Surf Telecom',
+                exp3Desc: 'Developed multiple Python scripts for automated data collection, including web scraping and data handling. Acted in building Node.js APIs to support internal systems.',
+                skillsTitle: 'My Tools',
+                langCategory: 'Languages',
+                dataAICategory: 'Data, AI & BI',
+                softwareEngCategory: 'Software Engineering',
+                cloudDevOpsCategory: 'Cloud & DevOps',
+                databasesCategory: 'Databases',
+                languagesCategory: 'Languages',
+                englishSkill: 'English (Fluent)',
+                portugueseSkill: 'Portuguese (Native)',
+                projectsTitle: 'Project Portfolio',
+                project1Title: 'Credit Risk Classification API',
+                project1Desc: 'A containerized API with Docker that uses a Machine Learning model to predict customer credit risk.',
+                project1Tech: 'Technologies: Python, FastAPI, Scikit-Learn, Docker.',
+                viewGithubBtn: 'View on GitHub',
+                liveDemoBtn: 'Live Demo',
+                project2Title: '[TO BE DEFINED]',
+                project2Desc: 'Project focused on MLOps and data pipeline in the cloud.',
+                project2Status: 'Status: In Development',
+                contactTitle: 'Let\'s Talk?',
+                contactText: 'I am open to new opportunities and partnerships. Feel free to get in touch.',
+                emailBtn: 'E-mail',
+                allRightsReserved: 'All rights reserved.',
+                chatbotTitle: 'Gabriel Chatbot',
+                chatbotWelcome: 'Hello! I am Gabriel\'s chatbot. Ask me about him!',
+                chatPlaceholder: 'Type your question...',
+                chatbotUnknown: 'Sorry, I didn\'t understand your question. Try asking about \'experience\', \'skills\', \'projects\', or \'contact\'.',
+                kbName: 'His name is Gabriel Milhardo.',
+                kbWhoIsGabriel: 'Gabriel Milhardo is a Data and AI Analyst with a strong background in Software Engineering and Cloud, with over 3 years of experience.',
+                kbExperience: 'He has experience at Surf Telecom as a Data and AI Analyst, Project Analyst, and Developer.',
+                kbSurfTelecom: 'At Surf Telecom, he worked as a Data and AI Analyst (April 2025 – Present), Project Analyst (May 2023 – April 2025), and Developer (April 2022 – May 2023).',
+                kbSkills: 'His skills include Python, SQL, Node.js, JavaScript, Pandas, Scikit-Learn, Power BI, NumPy, RESTful APIs, Git, Web Scraping, AWS (EC2, S3), Docker, MySQL, English (Fluent), and Portuguese (Native).',
+                kbCompetencies: 'His competencies are in Languages (Python, SQL, Node.js, JavaScript), Data, AI & BI (Pandas, Scikit-Learn, Power BI, NumPy), Software Engineering (RESTful APIs, Git, Web Scraping), Cloud & DevOps (AWS, Docker), Databases (MySQL), and Languages (English, Portuguese).',
+                kbProjects: 'He has a \'Credit Risk Classification API\' project and another \'In Development\' project focused on MLOps and data pipeline in the cloud.',
+                kbContact: 'You can contact Gabriel via email (gabrielmilhardo@gmail.com), LinkedIn (https://www.linkedin.com/in/gabriel-milhardo-7b1232243/) or GitHub (https://github.com/GabrielMilhardo1).',
+                kbEmail: 'Gabriel\'s contact email is gabrielmilhardo@gmail.com.',
+                kbLinkedIn: 'Gabriel\'s LinkedIn is https://www.linkedin.com/in/gabriel-milhardo-7b1232243/.',
+                kbGitHub: 'Gabriel\'s GitHub is https://github.com/GabrielMilhardo1.',
+                kbLocation: 'Gabriel is located in São Paulo, Brazil.',
+                kbEducation: 'Information about education is not detailed on the current page.',
+                kbSalary: 'I do not have information about salary.',
+                kbAge: 'I do not have information about Gabriel\'s age.',
+                kbHello: 'Hello! How can I help?',
+                kbHi: 'Hi! How can I be useful?',
+                kbHowAreYou: 'All great! And with you?',
+                kbThanks: 'You\'re welcome! If you need anything else, just ask.',
+                kbGratitude: 'You\'re welcome! If you need anything else, just ask.'
+            }
+        };
+
+        function setLanguage(lang) {
+            document.documentElement.setAttribute('data-lang', lang);
+            document.documentElement.lang = lang; // Update HTML lang attribute
+
+            // Update title
+            document.querySelector('title').textContent = translations[lang].pageTitle;
+
+            // Update elements with data-translate attribute
+            document.querySelectorAll('[data-translate]').forEach(element => {
+                const key = element.getAttribute('data-translate');
+                if (translations[lang][key]) {
+                    if (element.tagName === 'INPUT' && element.hasAttribute('placeholder')) {
+                        element.setAttribute('placeholder', translations[lang][key]);
+                    } else {
+                        element.textContent = translations[lang][key];
+                    }
+                }
+            });
+
+            // Update Typed.js strings
+            if (window.typed) { // Check if Typed.js instance exists
+                window.typed.destroy(); // Destroy existing instance
+            }
+            window.typed = new Typed('#typing-effect', {
+                strings: translations[lang].typingStrings,
+                typeSpeed: 100,
+                backSpeed: 60,
+                loop: true,
+                cursorChar: '|',
+            });
+
+            // Update chatbot welcome message
+            const chatbotWelcomeElement = document.querySelector('[data-translate="chatbotWelcome"]');
+            if (chatbotWelcomeElement) {
+                chatbotWelcomeElement.textContent = translations[lang].chatbotWelcome;
+            }
+
+            // Update chatbot knowledge base
+            const currentKnowledgeBase = {};
+            for (const key in translations[lang]) {
+                if (key.startsWith('kb')) {
+                    currentKnowledgeBase[key.substring(2).toLowerCase()] = translations[lang][key];
+                }
+            }
+            // Manually map some common keywords to the new knowledge base
+            knowledgeBase.nome = currentKnowledgeBase.name || translations[lang].kbName;
+            knowledgeBase["quem é gabriel"] = currentKnowledgeBase.whoisgabriel || translations[lang].kbWhoIsGabriel;
+            knowledgeBase.experiencia = currentKnowledgeBase.experience || translations[lang].kbExperience;
+            knowledgeBase["surf telecom"] = currentKnowledgeBase.surftelecom || translations[lang].kbSurfTelecom;
+            knowledgeBase.habilidades = currentKnowledgeBase.skills || translations[lang].kbSkills;
+            knowledgeBase.competencias = currentKnowledgeBase.competencies || translations[lang].kbCompetencies;
+            knowledgeBase.projetos = currentKnowledgeBase.projects || translations[lang].kbProjects;
+            knowledgeBase.contato = currentKnowledgeBase.contact || translations[lang].kbContact;
+            knowledgeBase.email = currentKnowledgeBase.email || translations[lang].kbEmail;
+            knowledgeBase.linkedin = currentKnowledgeBase.linkedin || translations[lang].kbLinkedIn;
+            knowledgeBase.github = currentKnowledgeBase.github || translations[lang].kbGitHub;
+            knowledgeBase.localizacao = currentKnowledgeBase.location || translations[lang].kbLocation;
+            knowledgeBase.formacao = currentKnowledgeBase.education || translations[lang].kbEducation;
+            knowledgeBase.salario = currentKnowledgeBase.salary || translations[lang].kbSalary;
+            knowledgeBase.idade = currentKnowledgeBase.age || translations[lang].kbAge;
+            knowledgeBase.ola = currentKnowledgeBase.hello || translations[lang].kbHello;
+            knowledgeBase.oi = currentKnowledgeBase.hi || translations[lang].kbHi;
+            knowledgeBase["tudo bem"] = currentKnowledgeBase.howareyou || translations[lang].kbHowAreYou;
+            knowledgeBase.obrigado = currentKnowledgeBase.thanks || translations[lang].kbThanks;
+            knowledgeBase.grato = currentKnowledgeBase.gratitude || translations[lang].kbGratitude;
+
+            // Update chatbot unknown message
+            knowledgeBase.unknown = translations[lang].chatbotUnknown;
+
+
+            localStorage.setItem('preferredLang', lang);
+        }
+
         // Navbar scroll effect
         const navbar = document.getElementById('navbar');
         window.onscroll = () => {
@@ -297,14 +546,25 @@
             mobileMenu.classList.toggle('hidden');
         });
 
-        // Typing effect
-        new Typed('#typing-effect', {
-            strings: ['Python', 'AWS', 'APIs RESTful', 'Global Experience'],
-            typeSpeed: 100,
-            backSpeed: 60,
-            loop: true,
-            cursorChar: '|',
-        });
+        // Language switcher
+        const langPtButton = document.getElementById('lang-pt');
+        const langEnButton = document.getElementById('lang-en');
+
+        langPtButton.addEventListener('click', () => setLanguage('pt'));
+        langEnButton.addEventListener('click', () => setLanguage('en'));
+
+        // Initialize language on page load
+        const savedLang = localStorage.getItem('preferredLang') || 'pt';
+        setLanguage(savedLang);
+
+        // Typing effect (initialization moved to setLanguage)
+        // new Typed('#typing-effect', {
+        //     strings: ['Python', 'AWS', 'APIs RESTful', 'Global Experience'],
+        //     typeSpeed: 100,
+        //     backSpeed: 60,
+        //     loop: true,
+        //     cursorChar: '|',
+        // });
 
         // ScrollReveal animations
         ScrollReveal().reveal('.reveal', {
@@ -377,10 +637,10 @@
             messageElement.classList.add('flex', 'mb-2');
             if (sender === 'user') {
                 messageElement.classList.add('justify-end');
-                messageElement.innerHTML = `<div class="bg-sky-600 text-white p-2 rounded-lg max-w-[70%]">${message}</div>`;
+                messageElement.innerHTML = `<div class="bg-sky-600 text-white p-2 rounded-lg max-w-[70%]" >${message}</div>`;
             } else {
                 messageElement.classList.add('justify-start');
-                messageElement.innerHTML = `<div class="bg-gray-600 text-white p-2 rounded-lg max-w-[70%]">${message}</div>`;
+                messageElement.innerHTML = `<div class="bg-gray-600 text-white p-2 rounded-lg max-w-[70%]" >${message}</div>`;
             }
             chatMessages.appendChild(messageElement);
             chatMessages.scrollTop = chatMessages.scrollHeight; // Scroll to bottom
@@ -393,7 +653,7 @@
                     return knowledgeBase[keyword];
                 }
             }
-            return "Desculpe, não entendi sua pergunta. Tente perguntar sobre 'experiência', 'habilidades', 'projetos' ou 'contato'.";
+            return knowledgeBase.unknown; // Use translated unknown message
         }
 
         chatSend.addEventListener('click', sendMessage);
