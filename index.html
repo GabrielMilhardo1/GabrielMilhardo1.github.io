@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabriel Milhardo | Analista de Dados & Machine Learning Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <style>
+        body {
+            font-family: 'Sora', sans-serif;
+            background-color: #111827;
+            color: #E5E7EB;
+        }
+        .glass-nav {
+            background-color: rgba(17, 24, 39, 0.8);
+            backdrop-filter: blur(10px);
+        }
+        .solid-nav {
+            background-color: #111827;
+        }
+        .typing-cursor {
+            border-right: .15em solid #38bdf8;
+        }
+    </style>
+</head>
+<body class="w-full">
+
+    <!-- Header -->
+    <header id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 glass-nav">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-white">Gabriel Milhardo</a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#about" class="text-gray-300 hover:text-sky-400 transition">Sobre</a>
+                <a href="#experience" class="text-gray-300 hover:text-sky-400 transition">Experiência</a>
+                <a href="#skills" class="text-gray-300 hover:text-sky-400 transition">Competências</a>
+                <a href="#projects" class="text-gray-300 hover:text-sky-400 transition">Projetos</a>
+                <a href="#contact" class="text-gray-300 hover:text-sky-400 transition">Contato</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="#about" class="block py-2 px-4 text-sm text-gray-300 hover:bg-gray-700">Sobre</a>
+            <a href="#experience" class="block py-2 px-4 text-sm text-gray-300 hover:bg-gray-700">Experiência</a>
+            <a href="#skills" class="block py-2 px-4 text-sm text-gray-300 hover:bg-gray-700">Competências</a>
+            <a href="#projects" class="block py-2 px-4 text-sm text-gray-300 hover:bg-gray-700">Projetos</a>
+            <a href="#contact" class="block py-2 px-4 text-sm text-gray-300 hover:bg-gray-700">Contato</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6">
+        <!-- Hero Section -->
+        <section id="hero" class="min-h-screen flex flex-col justify-center items-center text-center">
+            <h1 class="text-5xl md:text-7xl font-bold text-white reveal">Gabriel Milhardo</h1>
+            <h2 class="text-2xl md:text-4xl mt-4 text-sky-400 font-semibold reveal">
+                Analista de Dados & Machine Learning Engineer
+            </h2>
+            <p class="text-lg md:text-xl mt-4 text-gray-300 reveal">
+                <span id="typing-effect"></span>
+            </p>
+            <div class="mt-8 flex flex-wrap justify-center gap-4 reveal">
+                <a href="#projects" class="bg-sky-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-sky-600 transition-transform transform hover:scale-105">
+                    Ver Projetos
+                </a>
+                <a href="https://www.linkedin.com/in/gabriel-milhardo-7b1232243/?trk=opento_sprofile_details" target="_blank" class="bg-gray-700 text-white font-bold py-3 px-6 rounded-lg hover:bg-gray-600 transition-transform transform hover:scale-105 flex items-center gap-2">
+                    <i class="devicon-linkedin-plain"></i> LinkedIn
+                </a>
+                <a href="https://github.com/GabrielMilhardo1" target="_blank" class="bg-gray-700 text-white font-bold py-3 px-6 rounded-lg hover:bg-gray-600 transition-transform transform hover:scale-105 flex items-center gap-2">
+                    <i class="devicon-github-original"></i> GitHub
+                </a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20">
+            <h2 class="text-4xl font-bold text-center text-white mb-12 reveal">Sobre Mim</h2>
+            <div class="max-w-4xl mx-auto text-lg text-gray-300 text-center leading-relaxed reveal">
+                <p>
+                    Analista de Dados e IA com forte background em Engenharia de Software e Cloud. Com mais de 3 anos de experiência, sou proficiente em Python para análise e modelagem, e experiente na construção e consumo de APIs RESTful.
+                </p>
+                <p class="mt-4">
+                    Possuo vivência prática com o deployment de aplicações (Node.js) em ambientes de produção na AWS (EC2, S3), demonstrando capacidade de gerenciar o ciclo de vida de uma solução de ponta a ponta. Com fluência profissional em inglês, comprovada na condução de projetos técnicos com stakeholders internacionais, busco ativamente posições de Machine Learning Engineer ou Data Scientist onde possa aplicar essa visão integrada para construir e produtizar soluções de dados em escala.
+                </p>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-20">
+            <h2 class="text-4xl font-bold text-center text-white mb-16 reveal">Jornada Profissional</h2>
+            <div class="relative max-w-4xl mx-auto">
+                <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gray-700"></div>
+                <div class="space-y-16">
+                    <!-- Experience Item 1 -->
+                    <div class="flex items-center w-full reveal">
+                        <div class="w-1/2 pr-8 text-right">
+                            <p class="text-sky-400 font-semibold">Abril 2025 – Presente</p>
+                            <h3 class="text-xl font-bold text-white mt-1">Analista de Dados e Inteligência Artificial</h3>
+                            <p class="text-gray-400">Surf Telecom</p>
+                            <p class="text-sm mt-2 text-gray-300">Liderei o desenvolvimento de uma plataforma web para visualização estratégica de KPIs de chamadas de voz, utilizando Python para extração e tratamento de dados (CDR) e JavaScript para o front-end. Implementei uma solução de monitoramento em tempo real (near real-time) para a gestão de rede.</p>
+                        </div>
+                        <div class="w-1/12 flex justify-center">
+                            <div class="w-4 h-4 bg-sky-500 rounded-full z-10"></div>
+                        </div>
+                        <div class="w-1/2 pl-8"></div>
+                    </div>
+                    <!-- Experience Item 2 -->
+                    <div class="flex items-center w-full reveal">
+                        <div class="w-1/2 pr-8"></div>
+                        <div class="w-1/12 flex justify-center">
+                            <div class="w-4 h-4 bg-sky-500 rounded-full z-10"></div>
+                        </div>
+                        <div class="w-1/2 pl-8 text-left">
+                            <p class="text-sky-400 font-semibold">Maio 2023 – Abril 2025</p>
+                            <h3 class="text-xl font-bold text-white mt-1">Analista de Projetos</h3>
+                            <p class="text-gray-400">Surf Telecom</p>
+                            <p class="text-sm mt-2 text-gray-300">Gerenciei a implantação de uma nova plataforma de mensageria (SMS), integrando brokers nacionais e internacionais. Conduzi alinhamentos técnicos e negociações de escopo com parceiros e clientes globais em inglês.</p>
+                        </div>
+                    </div>
+                    <!-- Experience Item 3 -->
+                    <div class="flex items-center w-full reveal">
+                        <div class="w-1/2 pr-8 text-right">
+                            <p class="text-sky-400 font-semibold">Abril 2022 – Maio 2023</p>
+                            <h3 class="text-xl font-bold text-white mt-1">Desenvolvedor</h3>
+                            <p class="text-gray-400">Surf Telecom</p>
+                            <p class="text-sm mt-2 text-gray-300">Desenvolvi múltiplos scripts em Python para coleta automatizada de dados, incluindo web scraping e tratamento de dados. Atuei na construção de APIs em Node.js para suportar sistemas internos.</p>
+                        </div>
+                        <div class="w-1/12 flex justify-center">
+                            <div class="w-4 h-4 bg-sky-500 rounded-full z-10"></div>
+                        </div>
+                        <div class="w-1/2 pl-8"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20">
+            <h2 class="text-4xl font-bold text-center text-white mb-12 reveal">Minhas Ferramentas</h2>
+            <div class="max-w-6xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-gray-800 p-6 rounded-lg reveal">
+                        <h3 class="text-2xl font-bold text-white mb-4">Linguagens</h3>
+                        <div class="flex flex-wrap gap-4">
+                            <span class="flex items-center gap-2 bg-gray-700 text-white py-2 px-4 rounded-lg"><i class="devicon-python-plain text-2xl"></i> Python</span>
+                            <span class="flex items-center gap-2 bg-gray-700 text-white py-2 px-4 rounded-lg"><i class="devicon-sqldeveloper-plain text-2xl"></i> SQL</span>
+                            <span class="flex items-center gap-2 bg-gray-700 text-white py-2 px-4 rounded-lg"><i class="devicon-nodejs-plain text-2xl"></i> Node.js</span>
+                            <span class="flex items-center gap-2 bg-gray-700 text-white py-2 px-4 rounded-lg"><i class="devicon-javascript-plain text-2xl"></i> JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-lg reveal">
+                        <h3 class="text-2xl font-bold text-white mb-4">Dados, IA & BI</h3>
+                        <div class="flex flex-wrap gap-4">
+                            <span class="flex items-center gap-2 bg-gray-700 text-white py-2 px-4 rounded-lg"><i class="devicon-pandas-original text-2xl"></i> Pandas</span>
+                            <span class="flex items-center gap-2 bg-gray-700 text-white py-2 px-4 rounded-lg"><i class="devicon-scikitlearn-plain text-2xl"></i> Scikit-Learn</span>
+                            <span class="flex items-center gap-2 bg-gray-700 text-white py-2 px-4 rounded-lg">Power BI</span>
+                            <span class="flex items-center gap-2 bg-gray-700 text-white py-2 px-4 rounded-lg"><i class="devicon-numpy-original text-2xl"></i> NumPy</span>
+                        </div>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-lg reveal">
+                        <h3 class="text-2xl font-bold text-white mb-4">Engenharia de Software</h3>
+                        <div class="flex flex-wrap gap-4">
+                            <span class="bg-gray-700 text-white py-2 px-4 rounded-lg">APIs RESTful</span>
+                            <span class="flex items-center gap-2 bg-gray-700 text-white py-2 px-4 rounded-lg"><i class="devicon-git-plain text-2xl"></i> Git</span>
+                            <span class="bg-gray-700 text-white py-2 px-4 rounded-lg">Web Scraping</span>
+                        </div>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-lg reveal">
+                        <h3 class="text-2xl font-bold text-white mb-4">Cloud & DevOps</h3>
+                        <div class="flex flex-wrap gap-4">
+                            <span class="flex items-center gap-2 bg-gray-700 text-white py-2 px-4 rounded-lg"><i class="devicon-amazonwebservices-original text-2xl"></i> AWS (EC2, S3)</span>
+                            <span class="flex items-center gap-2 bg-gray-700 text-white py-2 px-4 rounded-lg"><i class="devicon-docker-plain text-2xl"></i> Docker</span>
+                        </div>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-lg reveal">
+                        <h3 class="text-2xl font-bold text-white mb-4">Bancos de Dados</h3>
+                        <div class="flex flex-wrap gap-4">
+                            <span class="flex items-center gap-2 bg-gray-700 text-white py-2 px-4 rounded-lg"><i class="devicon-mysql-plain text-2xl"></i> MySQL</span>
+                        </div>
+                    </div>
+                    <div class="bg-gray-800 p-6 rounded-lg reveal">
+                        <h3 class="text-2xl font-bold text-white mb-4">Idiomas</h3>
+                        <div class="flex flex-wrap gap-4">
+                            <span class="bg-gray-700 text-white py-2 px-4 rounded-lg">Inglês (Fluente)</span>
+                            <span class="bg-gray-700 text-white py-2 px-4 rounded-lg">Português (Nativo)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20">
+            <h2 class="text-4xl font-bold text-center text-white mb-12 reveal">Portfólio de Projetos</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Project 1 -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden group transform hover:scale-105 transition-transform duration-300 reveal">
+                    <img src="https://via.placeholder.com/600x400/1f2937/ffffff?text=API+Code" alt="API de Classificação de Risco de Crédito" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-white">API de Classificação de Risco de Crédito</h3>
+                        <p class="mt-2 text-gray-300">Uma API containerizada com Docker que utiliza um modelo de Machine Learning para prever o risco de crédito de clientes.</p>
+                        <p class="mt-4 text-sm text-sky-400">Tecnologias: Python, FastAPI, Scikit-Learn, Docker.</p>
+                        <div class="mt-6 flex gap-4">
+                            <a href="https://github.com/GabrielMilhardo1" target="_blank" class="bg-sky-500 text-white py-2 px-4 rounded-lg hover:bg-sky-600 transition">Ver no GitHub</a>
+                            <button disabled class="bg-gray-600 text-gray-400 py-2 px-4 rounded-lg cursor-not-allowed">Live Demo</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden group transform hover:scale-105 transition-transform duration-300 reveal">
+                    <img src="https://via.placeholder.com/600x400/1f2937/ffffff?text=In+Development" alt="Projeto em Desenvolvimento" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-white">[A SER DEFINIDO]</h3>
+                        <p class="mt-2 text-gray-300">Projeto focado em MLOps e pipeline de dados na nuvem.</p>
+                        <p class="mt-4 text-sm text-yellow-400">Status: Em Desenvolvimento</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 text-center">
+            <h2 class="text-4xl font-bold text-white mb-6 reveal">Vamos Conversar?</h2>
+            <p class="text-lg text-gray-300 max-w-2xl mx-auto mb-8 reveal">
+                Estou aberto a novas oportunidades e parcerias. Sinta-se à vontade para entrar em contato.
+            </p>
+            <div class="flex justify-center items-center gap-6 flex-wrap reveal">
+                <a href="mailto:gabrielmilhardo@gmail.com" class="bg-gray-700 text-white font-bold py-4 px-8 rounded-lg hover:bg-sky-500 transition-colors transform hover:scale-105 flex items-center gap-3 text-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    E-mail
+                </a>
+                <a href="https://www.linkedin.com/in/gabriel-milhardo-7b1232243/?trk=opento_sprofile_details" target="_blank" class="bg-gray-700 text-white font-bold py-4 px-8 rounded-lg hover:bg-sky-500 transition-colors transform hover:scale-105 flex items-center gap-3 text-lg">
+                     <i class="devicon-linkedin-plain text-2xl"></i> LinkedIn
+                </a>
+                <a href="https://github.com/GabrielMilhardo1" target="_blank" class="bg-gray-700 text-white font-bold py-4 px-8 rounded-lg hover:bg-sky-500 transition-colors transform hover:scale-105 flex items-center gap-3 text-lg">
+                    <i class="devicon-github-original text-2xl"></i> GitHub
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center py-6 border-t border-gray-800">
+        <p class="text-gray-400">&copy; 2025 Gabriel Milhardo. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.onscroll = () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('solid-nav');
+                navbar.classList.remove('glass-nav');
+            } else {
+                navbar.classList.add('glass-nav');
+                navbar.classList.remove('solid-nav');
+            }
+        };
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Typing effect
+        new Typed('#typing-effect', {
+            strings: ['Python', 'AWS', 'APIs RESTful', 'Global Experience'],
+            typeSpeed: 100,
+            backSpeed: 60,
+            loop: true,
+            cursorChar: '|',
+        });
+
+        // ScrollReveal animations
+        ScrollReveal().reveal('.reveal', {
+            delay: 200,
+            distance: '50px',
+            origin: 'bottom',
+            opacity: 0,
+            duration: 800,
+            easing: 'cubic-bezier(0.5, 0, 0, 1)',
+            interval: 150
+        });
+    </script>
+
+</body>
+</html>
