@@ -201,7 +201,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                 <!-- Project 1 -->
                 <div class="bg-gray-800 rounded-lg overflow-hidden group transform hover:scale-105 transition-transform duration-300 reveal">
-                    <img src="https://via.placeholder.com/600x400/1f2937/ffffff?text=API+Code" alt="API de Classificação de Risco de Crédito" class="w-full h-56 object-cover">
+                    <img src="https://placehold.co/600x400/1f2937/ffffff?text=API+Code" alt="API de Classificação de Risco de Crédito" class="w-full h-56 object-cover">
                     <div class="p-6">
                         <h3 class="text-2xl font-bold text-white">API de Classificação de Risco de Crédito</h3>
                         <p class="mt-2 text-gray-300">Uma API containerizada com Docker que utiliza um modelo de Machine Learning para prever o risco de crédito de clientes.</p>
@@ -214,7 +214,7 @@
                 </div>
                 <!-- Project 2 -->
                 <div class="bg-gray-800 rounded-lg overflow-hidden group transform hover:scale-105 transition-transform duration-300 reveal">
-                    <img src="https://via.placeholder.com/600x400/1f2937/ffffff?text=In+Development" alt="Projeto em Desenvolvimento" class="w-full h-56 object-cover">
+                    <img src="https://placehold.co/600x400/1f2937/ffffff?text=In+Development" alt="Projeto em Desenvolvimento" class="w-full h-56 object-cover">
                     <div class="p-6">
                         <h3 class="text-2xl font-bold text-white">[A SER DEFINIDO]</h3>
                         <p class="mt-2 text-gray-300">Projeto focado em MLOps e pipeline de dados na nuvem.</p>
@@ -248,6 +248,34 @@
     <footer class="text-center py-6 border-t border-gray-800">
         <p class="text-gray-400">&copy; 2025 Gabriel Milhardo. Todos os direitos reservados.</p>
     </footer>
+
+    <!-- Chatbot UI -->
+    <div id="chatbot-container" class="fixed bottom-6 right-6 z-50">
+        <button id="chatbot-toggle" class="bg-sky-500 text-white p-4 rounded-full shadow-lg hover:bg-sky-600 transition-colors focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </button>
+
+        <div id="chatbot-window" class="hidden bg-gray-800 rounded-lg shadow-xl w-80 h-96 flex flex-col overflow-hidden">
+            <div class="bg-gray-700 text-white p-4 flex justify-between items-center">
+                <h3 class="font-bold">Chatbot Gabriel</h3>
+                <button id="chatbot-close" class="text-gray-300 hover:text-white focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                </button>
+            </div>
+            <div id="chat-messages" class="flex-1 p-4 overflow-y-auto text-sm custom-scrollbar">
+                <!-- Messages will appear here -->
+                <div class="flex justify-start mb-2">
+                    <div class="bg-gray-600 text-white p-2 rounded-lg max-w-[70%]">Olá! Sou o chatbot do Gabriel. Pergunte-me sobre ele!</div>
+                </div>
+            </div>
+            <div class="p-4 border-t border-gray-700 flex">
+                <input type="text" id="chat-input" class="flex-1 bg-gray-700 text-white rounded-l-lg p-2 focus:outline-none focus:ring-2 focus:ring-sky-500" placeholder="Digite sua pergunta...">
+                <button id="chat-send" class="bg-sky-500 text-white p-2 rounded-r-lg hover:bg-sky-600 transition-colors focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </button>
+            </div>
+        </div>
+    </div>
 
     <script>
         // Navbar scroll effect
@@ -287,6 +315,92 @@
             duration: 800,
             easing: 'cubic-bezier(0.5, 0, 0, 1)',
             interval: 150
+        });
+
+        // Chatbot Logic
+        const chatbotToggle = document.getElementById('chatbot-toggle');
+        const chatbotWindow = document.getElementById('chatbot-window');
+        const chatbotClose = document.getElementById('chatbot-close');
+        const chatMessages = document.getElementById('chat-messages');
+        const chatInput = document.getElementById('chat-input');
+        const chatSend = document.getElementById('chat-send');
+
+        chatbotToggle.addEventListener('click', () => {
+            chatbotWindow.classList.toggle('hidden');
+            if (!chatbotWindow.classList.contains('hidden')) {
+                chatInput.focus();
+            }
+        });
+
+        chatbotClose.addEventListener('click', () => {
+            chatbotWindow.classList.add('hidden');
+        });
+
+        const knowledgeBase = {
+            "nome": "O nome dele é Gabriel Milhardo.",
+            "quem é gabriel": "Gabriel Milhardo é Analista de Dados e IA com forte background em Engenharia de Software e Cloud, com mais de 3 anos de experiência.",
+            "experiencia": "Ele tem experiência na Surf Telecom como Analista de Dados e IA, Analista de Projetos e Desenvolvedor.",
+            "surf telecom": "Na Surf Telecom, ele atuou como Analista de Dados e IA (Abril 2025 – Presente), Analista de Projetos (Maio 2023 – Abril 2025) e Desenvolvedor (Abril 2022 – Maio 2023).",
+            "habilidades": "Suas habilidades incluem Python, SQL, Node.js, JavaScript, Pandas, Scikit-Learn, Power BI, NumPy, APIs RESTful, Git, Web Scraping, AWS (EC2, S3), Docker, MySQL, Inglês (Fluente) e Português (Nativo).",
+            "competencias": "Suas competências são em Linguagens (Python, SQL, Node.js, JavaScript), Dados, IA & BI (Pandas, Scikit-Learn, Power BI, NumPy), Engenharia de Software (APIs RESTful, Git, Web Scraping), Cloud & DevOps (AWS, Docker), Bancos de Dados (MySQL) e Idiomas (Inglês, Português).",
+            "projetos": "Ele tem um projeto de 'API de Classificação de Risco de Crédito' e outro projeto 'Em Desenvolvimento' focado em MLOps e pipeline de dados na nuvem.",
+            "contato": "Você pode entrar em contato com Gabriel por e-mail (gabrielmilhardo@gmail.com), LinkedIn (https://www.linkedin.com/in/gabriel-milhardo-7b1232243/) ou GitHub (https://github.com/GabrielMilhardo1).",
+            "email": "O e-mail de contato do Gabriel é gabrielmilhardo@gmail.com.",
+            "linkedin": "O LinkedIn do Gabriel é https://www.linkedin.com/in/gabriel-milhardo-7b1232243/.",
+            "github": "O GitHub do Gabriel é https://github.com/GabrielMilhardo1.",
+            "localizacao": "Gabriel está localizado em São Paulo, Brasil.",
+            "formacao": "As informações sobre formação não estão detalhadas na página atual.",
+            "salario": "Não tenho informações sobre salário.",
+            "idade": "Não tenho informações sobre a idade de Gabriel.",
+            "ola": "Olá! Como posso ajudar?",
+            "oi": "Oi! Em que posso ser útil?",
+            "tudo bem": "Tudo ótimo! E com você?",
+            "obrigado": "De nada! Se precisar de mais alguma coisa, é só perguntar.",
+            "grato": "De nada! Se precisar de mais alguma coisa, é só perguntar."
+        };
+
+        function sendMessage() {
+            const userMessage = chatInput.value.trim();
+            if (userMessage === '') return;
+
+            appendMessage(userMessage, 'user');
+            chatInput.value = '';
+
+            setTimeout(() => {
+                const botResponse = getBotResponse(userMessage);
+                appendMessage(botResponse, 'bot');
+            }, 500);
+        }
+
+        function appendMessage(message, sender) {
+            const messageElement = document.createElement('div');
+            messageElement.classList.add('flex', 'mb-2');
+            if (sender === 'user') {
+                messageElement.classList.add('justify-end');
+                messageElement.innerHTML = `<div class="bg-sky-600 text-white p-2 rounded-lg max-w-[70%]">${message}</div>`;
+            } else {
+                messageElement.classList.add('justify-start');
+                messageElement.innerHTML = `<div class="bg-gray-600 text-white p-2 rounded-lg max-w-[70%]">${message}</div>`;
+            }
+            chatMessages.appendChild(messageElement);
+            chatMessages.scrollTop = chatMessages.scrollHeight; // Scroll to bottom
+        }
+
+        function getBotResponse(message) {
+            const lowerCaseMessage = message.toLowerCase();
+            for (const keyword in knowledgeBase) {
+                if (lowerCaseMessage.includes(keyword)) {
+                    return knowledgeBase[keyword];
+                }
+            }
+            return "Desculpe, não entendi sua pergunta. Tente perguntar sobre 'experiência', 'habilidades', 'projetos' ou 'contato'.";
+        }
+
+        chatSend.addEventListener('click', sendMessage);
+        chatInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
         });
     </script>
 
