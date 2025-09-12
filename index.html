@@ -4,10 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-translate="pageTitle">Gabriel Milhardo | Analista de Dados & Machine Learning Engineer</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Gabriel Milhardo - Analista de Dados & ML Engineer com 3+ anos em Python, AWS, APIs RESTful. Soluções de dados em produção na Surf Telecom.">
+    <meta name="keywords" content="Gabriel Milhardo, Data Analyst, Machine Learning Engineer, Python, AWS, APIs RESTful, Data Science, São Paulo">
+    <meta name="author" content="Gabriel Milhardo">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gabrielmilhardo1.github.io/">
+    <meta property="og:title" content="Gabriel Milhardo | Data Analyst & Machine Learning Engineer">
+    <meta property="og:description" content="Analista de Dados & ML Engineer com 3+ anos em Python, AWS, APIs RESTful. Especializando em soluções de dados em produção.">
+    <meta property="og:image" content="https://gabrielmilhardo1.github.io/assets/preview.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://gabrielmilhardo1.github.io/">
+    <meta property="twitter:title" content="Gabriel Milhardo | Data Analyst & Machine Learning Engineer">
+    <meta property="twitter:description" content="Analista de Dados & ML Engineer com 3+ anos em Python, AWS, APIs RESTful.">
+    <meta property="twitter:image" content="https://gabrielmilhardo1.github.io/assets/preview.jpg">
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="manifest" href="/assets/site.webmanifest">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://gabrielmilhardo1.github.io/">
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+    
+    <!-- Hotjar Tracking (Optional) -->
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:YOUR_HOTJAR_ID,hjsv:6};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome for flags -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous"> <!-- Font Awesome for flags -->
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <style>
@@ -41,9 +91,94 @@
         .custom-scrollbar::-webkit-scrollbar-thumb:hover {
             background: #9CA3AF;
         }
+        
+        /* Dark mode styles */
+        [data-theme="dark"] {
+            --bg-primary: #111827;
+            --bg-secondary: #1F2937;
+            --text-primary: #E5E7EB;
+            --text-secondary: #9CA3AF;
+        }
+        
+        [data-theme="light"] {
+            --bg-primary: #FFFFFF;
+            --bg-secondary: #F9FAFB;
+            --text-primary: #111827;
+            --text-secondary: #6B7280;
+        }
+        
+        /* Theme toggle button */
+        .theme-toggle {
+            position: relative;
+            width: 60px;
+            height: 30px;
+            border-radius: 15px;
+            background: #374151;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .theme-toggle::before {
+            content: '';
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: #F3F4F6;
+            transition: all 0.3s ease;
+        }
+        
+        [data-theme="light"] .theme-toggle {
+            background: #FCD34D;
+        }
+        
+        [data-theme="light"] .theme-toggle::before {
+            transform: translateX(30px);
+            background: #FFFFFF;
+        }
     </style>
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Gabriel Milhardo",
+        "jobTitle": "Data Analyst & Machine Learning Engineer",
+        "description": "Analista de Dados e IA com forte background em Engenharia de Software e Cloud. Com mais de 3 anos de experiência, sou proficiente em Python para análise e modelagem.",
+        "url": "https://gabrielmilhardo1.github.io/",
+        "sameAs": [
+            "https://www.linkedin.com/in/gabriel-milhardo-7b1232243/",
+            "https://github.com/GabrielMilhardo1"
+        ],
+        "knowsAbout": [
+            "Python",
+            "Machine Learning",
+            "Data Analysis",
+            "AWS",
+            "APIs RESTful",
+            "Node.js",
+            "JavaScript",
+            "SQL"
+        ],
+        "worksFor": {
+            "@type": "Organization",
+            "name": "Surf Telecom"
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "São Paulo",
+            "addressCountry": "BR"
+        },
+        "email": "gabrielmilhardo@gmail.com"
+    }
+    </script>
 </head>
-<body class="w-full">
+<body class="w-full" data-theme="dark">
+    <!-- Skip Navigation -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-sky-600 text-white px-4 py-2 rounded-lg z-50 transition-all">Skip to main content</a>
 
     <!-- Header -->
     <header id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 glass-nav">
@@ -57,15 +192,18 @@
                 <a href="#contact" class="text-gray-300 hover:text-sky-400 transition" data-translate="navContact">Contato</a>
             </nav>
             <div class="flex items-center space-x-4">
+                <!-- Theme Toggle -->
+                <button id="theme-toggle" class="theme-toggle focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2" aria-label="Toggle dark/light mode" title="Toggle theme"></button>
+                
                 <div class="language-switcher flex space-x-2">
-                    <button id="lang-pt" class="focus:outline-none">
+                    <button id="lang-pt" class="focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2" aria-label="Mudar para Português">
                         <img src="https://flagcdn.com/w20/br.png" srcset="https://flagcdn.com/w40/br.png 2x" width="20" alt="Português" class="rounded shadow-md">
                     </button>
-                    <button id="lang-en" class="focus:outline-none">
+                    <button id="lang-en" class="focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2" aria-label="Switch to English">
                         <img src="https://flagcdn.com/w20/us.png" srcset="https://flagcdn.com/w40/us.png 2x" width="20" alt="English" class="rounded shadow-md">
                     </button>
                 </div>
-                <button id="mobile-menu-button" class="md:hidden text-white">
+                <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2" aria-label="Open mobile menu" aria-expanded="false">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
                     </svg>
@@ -81,7 +219,7 @@
         </div>
     </header>
 
-    <main class="container mx-auto px-6">
+    <main class="container mx-auto px-6" id="main-content" role="main">
         <!-- Hero Section -->
         <section id="hero" class="min-h-screen flex flex-col justify-center items-center text-center">
             <h1 class="text-5xl md:text-7xl font-bold text-white reveal">Gabriel Milhardo</h1>
@@ -126,7 +264,7 @@
                     <!-- Experience Item 1 -->
                     <div class="flex items-center w-full reveal">
                         <div class="w-1/2 pr-8 text-right">
-                            <p class="text-sky-400 font-semibold" data-translate="exp1Date">Abril 2025 – Presente</p>
+                            <p class="text-sky-400 font-semibold" data-translate="exp1Date">Abril 2024 – Presente</p>
                             <h3 class="text-xl font-bold text-white mt-1" data-translate="exp1Role">Analista de Dados e Inteligência Artificial</h3>
                             <p class="text-gray-400" data-translate="exp1Company">Surf Telecom</p>
                             <p class="text-sm mt-2 text-gray-300" data-translate="exp1Desc">Liderei o desenvolvimento de uma plataforma web para visualização estratégica de KPIs de chamadas de voz, utilizando Python para extração e tratamento de dados (CDR) e JavaScript para o front-end. Implementei uma solução de monitoramento em tempo real (near real-time) para a gestão de rede.</p>
@@ -143,7 +281,7 @@
                             <div class="w-4 h-4 bg-sky-500 rounded-full z-10"></div>
                         </div>
                         <div class="w-1/2 pl-8 text-left">
-                            <p class="text-sky-400 font-semibold" data-translate="exp2Date">Maio 2023 – Abril 2025</p>
+                            <p class="text-sky-400 font-semibold" data-translate="exp2Date">Maio 2023 – Abril 2024</p>
                             <h3 class="text-xl font-bold text-white mt-1" data-translate="exp2Role">Analista de Projetos</h3>
                             <p class="text-gray-400" data-translate="exp2Company">Surf Telecom</p>
                             <p class="text-sm mt-2 text-gray-300" data-translate="exp2Desc">Gerenciei a implantação de uma nova plataforma de mensageria (SMS), integrando brokers nacionais e internacionais. Conduzi alinhamentos técnicos e negociações de escopo com parceiros e clientes globais em inglês.</p>
@@ -224,49 +362,239 @@
         <!-- Projects Section -->
         <section id="projects" class="py-20">
             <h2 class="text-4xl font-bold text-center text-white mb-12 reveal" data-translate="projectsTitle">Portfólio de Projetos</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                <!-- Project 1 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                <!-- Project 1: Credit Risk API -->
                 <div class="bg-gray-800 rounded-lg overflow-hidden group transform hover:scale-105 transition-transform duration-300 reveal">
-                    <img src="https://placehold.co/600x400/1f2937/ffffff?text=API+Code" alt="API de Classificação de Risco de Crédito" class="w-full h-56 object-cover">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop&crop=center" alt="API de Classificação de Risco de Crédito" class="w-full h-56 object-cover" loading="lazy">
                     <div class="p-6">
-                        <h3 class="text-2xl font-bold text-white" data-translate="project1Title">API de Classificação de Risco de Crédito</h3>
-                        <p class="mt-2 text-gray-300" data-translate="project1Desc">Uma API containerizada com Docker que utiliza um modelo de Machine Learning para prever o risco de crédito de clientes.</p>
-                        <p class="mt-4 text-sm text-sky-400" data-translate="project1Tech">Tecnologias: Python, FastAPI, Scikit-Learn, Docker.</p>
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-2xl font-bold text-white" data-translate="project1Title">API de Classificação de Risco de Crédito</h3>
+                            <span class="bg-green-500 text-xs px-2 py-1 rounded-full text-white">Completo</span>
+                        </div>
+                        <p class="mt-2 text-gray-300" data-translate="project1Desc">API REST containerizada que utiliza algoritmos de ML para prever risco de crédito. Inclui validação de dados, logging e monitoramento.</p>
+                        <div class="mt-3 flex flex-wrap gap-2">
+                            <span class="bg-blue-600 text-xs px-2 py-1 rounded text-white">Python</span>
+                            <span class="bg-green-600 text-xs px-2 py-1 rounded text-white">FastAPI</span>
+                            <span class="bg-orange-600 text-xs px-2 py-1 rounded text-white">Scikit-Learn</span>
+                            <span class="bg-blue-500 text-xs px-2 py-1 rounded text-white">Docker</span>
+                        </div>
                         <div class="mt-6 flex gap-4">
-                            <a href="https://github.com/GabrielMilhardo1" target="_blank" class="bg-sky-500 text-white py-2 px-4 rounded-lg hover:bg-sky-600 transition" data-translate="viewGithubBtn">Ver no GitHub</a>
-                            <button disabled class="bg-gray-600 text-gray-400 py-2 px-4 rounded-lg cursor-not-allowed" data-translate="liveDemoBtn">Live Demo</button>
+                            <a href="https://github.com/GabrielMilhardo1" target="_blank" class="bg-sky-500 text-white py-2 px-4 rounded-lg hover:bg-sky-600 transition flex-1 text-center" data-translate="viewGithubBtn">Ver no GitHub</a>
                         </div>
                     </div>
                 </div>
-                <!-- Project 2 -->
+                
+                <!-- Project 2: Data Pipeline -->
                 <div class="bg-gray-800 rounded-lg overflow-hidden group transform hover:scale-105 transition-transform duration-300 reveal">
-                    <img src="https://placehold.co/600x400/1f2937/ffffff?text=In+Development" alt="Projeto em Desenvolvimento" class="w-full h-56 object-cover">
+                    <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop&crop=center" alt="Pipeline de Dados ETL" class="w-full h-56 object-cover" loading="lazy">
                     <div class="p-6">
-                        <h3 class="text-2xl font-bold text-white" data-translate="project2Title">[A SER DEFINIDO]</h3>
-                        <p class="mt-2 text-gray-300" data-translate="project2Desc">Projeto focado em MLOps e pipeline de dados na nuvem.</p>
-                        <p class="mt-4 text-sm text-yellow-400" data-translate="project2Status">Status: Em Desenvolvimento</p>
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-2xl font-bold text-white" data-translate="project2Title">Pipeline de Dados ETL</h3>
+                            <span class="bg-green-500 text-xs px-2 py-1 rounded-full text-white">Completo</span>
+                        </div>
+                        <p class="mt-2 text-gray-300" data-translate="project2Desc">Pipeline automatizado para extração, transformação e carregamento de dados de CDR (Call Detail Records) para dashboard de KPIs.</p>
+                        <div class="mt-3 flex flex-wrap gap-2">
+                            <span class="bg-blue-600 text-xs px-2 py-1 rounded text-white">Python</span>
+                            <span class="bg-yellow-600 text-xs px-2 py-1 rounded text-white">Pandas</span>
+                            <span class="bg-blue-500 text-xs px-2 py-1 rounded text-white">MySQL</span>
+                            <span class="bg-purple-600 text-xs px-2 py-1 rounded text-white">Power BI</span>
+                        </div>
+                        <div class="mt-6 flex gap-4">
+                            <a href="https://github.com/GabrielMilhardo1" target="_blank" class="bg-sky-500 text-white py-2 px-4 rounded-lg hover:bg-sky-600 transition flex-1 text-center" data-translate="viewGithubBtn">Ver no GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3: Web Scraping Tool -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden group transform hover:scale-105 transition-transform duration-300 reveal">
+                    <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=600&h=400&fit=crop&crop=center" alt="Ferramenta de Web Scraping" class="w-full h-56 object-cover" loading="lazy">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-2xl font-bold text-white" data-translate="project3Title">Ferramenta de Web Scraping</h3>
+                            <span class="bg-green-500 text-xs px-2 py-1 rounded-full text-white">Completo</span>
+                        </div>
+                        <p class="mt-2 text-gray-300" data-translate="project3Desc">Sistema automatizado para coleta de dados de múltiplas fontes web com rotação de proxies, tratamento de erros e armazenamento estruturado.</p>
+                        <div class="mt-3 flex flex-wrap gap-2">
+                            <span class="bg-blue-600 text-xs px-2 py-1 rounded text-white">Python</span>
+                            <span class="bg-green-600 text-xs px-2 py-1 rounded text-white">Selenium</span>
+                            <span class="bg-red-600 text-xs px-2 py-1 rounded text-white">BeautifulSoup</span>
+                            <span class="bg-orange-600 text-xs px-2 py-1 rounded text-white">Requests</span>
+                        </div>
+                        <div class="mt-6 flex gap-4">
+                            <a href="https://github.com/GabrielMilhardo1" target="_blank" class="bg-sky-500 text-white py-2 px-4 rounded-lg hover:bg-sky-600 transition flex-1 text-center" data-translate="viewGithubBtn">Ver no GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4: AWS Deployment -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden group transform hover:scale-105 transition-transform duration-300 reveal">
+                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&h=400&fit=crop&crop=center" alt="Deploy em AWS" class="w-full h-56 object-cover" loading="lazy">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-2xl font-bold text-white" data-translate="project4Title">Deploy Node.js em AWS</h3>
+                            <span class="bg-green-500 text-xs px-2 py-1 rounded-full text-white">Produção</span>
+                        </div>
+                        <p class="mt-2 text-gray-300" data-translate="project4Desc">Aplicação Node.js deployada em ambiente de produção AWS com EC2, S3, Load Balancer e monitoramento CloudWatch.</p>
+                        <div class="mt-3 flex flex-wrap gap-2">
+                            <span class="bg-green-600 text-xs px-2 py-1 rounded text-white">Node.js</span>
+                            <span class="bg-orange-500 text-xs px-2 py-1 rounded text-white">AWS EC2</span>
+                            <span class="bg-green-500 text-xs px-2 py-1 rounded text-white">AWS S3</span>
+                            <span class="bg-blue-600 text-xs px-2 py-1 rounded text-white">CloudWatch</span>
+                        </div>
+                        <div class="mt-6 flex gap-4">
+                            <a href="https://github.com/GabrielMilhardo1" target="_blank" class="bg-sky-500 text-white py-2 px-4 rounded-lg hover:bg-sky-600 transition flex-1 text-center" data-translate="viewGithubBtn">Ver no GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 5: SMS Platform Integration -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden group transform hover:scale-105 transition-transform duration-300 reveal">
+                    <img src="https://images.unsplash.com/photo-1596526131084-e8f376e6bcf8?w=600&h=400&fit=crop&crop=center" alt="Plataforma de SMS" class="w-full h-56 object-cover" loading="lazy">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-2xl font-bold text-white" data-translate="project5Title">Plataforma de Mensageria SMS</h3>
+                            <span class="bg-green-500 text-xs px-2 py-1 rounded-full text-white">Produção</span>
+                        </div>
+                        <p class="mt-2 text-gray-300" data-translate="project5Desc">Integração de plataforma SMS com brokers nacionais e internacionais, incluindo API gateway, rate limiting e monitoramento.</p>
+                        <div class="mt-3 flex flex-wrap gap-2">
+                            <span class="bg-green-600 text-xs px-2 py-1 rounded text-white">APIs RESTful</span>
+                            <span class="bg-blue-600 text-xs px-2 py-1 rounded text-white">Rate Limiting</span>
+                            <span class="bg-purple-600 text-xs px-2 py-1 rounded text-white">Global Scale</span>
+                            <span class="bg-yellow-600 text-xs px-2 py-1 rounded text-white">Monitoring</span>
+                        </div>
+                        <div class="mt-6 flex gap-4">
+                            <button disabled class="bg-gray-600 text-gray-400 py-2 px-4 rounded-lg cursor-not-allowed flex-1" data-translate="privateProjectBtn">Projeto Privado</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 6: MLOps Pipeline (New) -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden group transform hover:scale-105 transition-transform duration-300 reveal">
+                    <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=600&h=400&fit=crop&crop=center" alt="MLOps Pipeline" class="w-full h-56 object-cover" loading="lazy">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-2xl font-bold text-white" data-translate="project6Title">Pipeline MLOps</h3>
+                            <span class="bg-yellow-500 text-xs px-2 py-1 rounded-full text-white">Em Desenvolvimento</span>
+                        </div>
+                        <p class="mt-2 text-gray-300" data-translate="project6Desc">Pipeline completo de MLOps com CI/CD para modelos de ML, incluindo versionamento, testes automatizados e deploy contínuo.</p>
+                        <div class="mt-3 flex flex-wrap gap-2">
+                            <span class="bg-blue-600 text-xs px-2 py-1 rounded text-white">MLflow</span>
+                            <span class="bg-green-600 text-xs px-2 py-1 rounded text-white">GitHub Actions</span>
+                            <span class="bg-blue-500 text-xs px-2 py-1 rounded text-white">Docker</span>
+                            <span class="bg-orange-500 text-xs px-2 py-1 rounded text-white">AWS</span>
+                        </div>
+                        <div class="mt-6 flex gap-4">
+                            <button disabled class="bg-yellow-600 text-white py-2 px-4 rounded-lg cursor-not-allowed flex-1" data-translate="comingSoonBtn">Em Breve</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="py-20 text-center">
-            <h2 class="text-4xl font-bold text-white mb-6 reveal" data-translate="contactTitle">Vamos Conversar?</h2>
-            <p class="text-lg text-gray-300 max-w-2xl mx-auto mb-8 reveal" data-translate="contactText">
-                Estou aberto a novas oportunidades e parcerias. Sinta-se à vontade para entrar em contato.
-            </p>
-            <div class="flex justify-center items-center gap-6 flex-wrap reveal">
-                <a href="mailto:gabrielmilhardo@gmail.com" class="bg-gray-700 text-white font-bold py-4 px-8 rounded-lg hover:bg-sky-500 transition-colors transform hover:scale-105 flex items-center gap-3 text-lg">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                    <span data-translate="emailBtn">E-mail</span>
-                </a>
-                <a href="https://www.linkedin.com/in/gabriel-milhardo-7b1232243/?trk=opento_sprofile_details" target="_blank" class="bg-gray-700 text-white font-bold py-4 px-8 rounded-lg hover:bg-sky-500 transition-colors transform hover:scale-105 flex items-center gap-3 text-lg">
-                     <i class="devicon-linkedin-plain text-2xl"></i> LinkedIn
-                </a>
-                <a href="https://github.com/GabrielMilhardo1" target="_blank" class="bg-gray-700 text-white font-bold py-4 px-8 rounded-lg hover:bg-sky-500 transition-colors transform hover:scale-105 flex items-center gap-3 text-lg">
-                    <i class="devicon-github-original text-2xl"></i> GitHub
-                </a>
+        <section id="contact" class="py-20">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl font-bold text-white mb-6 reveal text-center" data-translate="contactTitle">Vamos Conversar?</h2>
+                <p class="text-lg text-gray-300 max-w-2xl mx-auto mb-12 reveal text-center" data-translate="contactText">
+                    Estou aberto a novas oportunidades e parcerias. Sinta-se à vontade para entrar em contato.
+                </p>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                    <!-- Contact Form -->
+                    <div class="reveal">
+                        <h3 class="text-2xl font-bold text-white mb-6" data-translate="contactFormTitle">Envie uma Mensagem</h3>
+                        <form id="contact-form" class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-300 mb-2" data-translate="nameLabel">Nome *</label>
+                                <input type="text" id="name" name="name" required class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent text-white placeholder-gray-400" data-translate-placeholder="namePlaceholder" placeholder="Seu nome completo">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-300 mb-2" data-translate="emailLabel">E-mail *</label>
+                                <input type="email" id="email" name="email" required class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent text-white placeholder-gray-400" data-translate-placeholder="emailPlaceholder" placeholder="seu@email.com">
+                            </div>
+                            <div>
+                                <label for="subject" class="block text-sm font-medium text-gray-300 mb-2" data-translate="subjectLabel">Assunto *</label>
+                                <input type="text" id="subject" name="subject" required class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent text-white placeholder-gray-400" data-translate-placeholder="subjectPlaceholder" placeholder="Assunto da mensagem">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-300 mb-2" data-translate="messageLabel">Mensagem *</label>
+                                <textarea id="message" name="message" rows="6" required class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent text-white placeholder-gray-400 resize-none" data-translate-placeholder="messagePlaceholder" placeholder="Escreva sua mensagem aqui..."></textarea>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="checkbox" id="privacy" name="privacy" required class="mr-3 w-4 h-4 text-sky-600 bg-gray-700 border-gray-600 rounded focus:ring-sky-500">
+                                <label for="privacy" class="text-sm text-gray-300" data-translate="privacyLabel">Concordo em ser contatado por e-mail para assuntos profissionais.</label>
+                            </div>
+                            <button type="submit" class="w-full bg-sky-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-sky-600 transition-colors transform hover:scale-[1.02] flex items-center justify-center gap-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+                                <span data-translate="sendBtn">Enviar Mensagem</span>
+                            </button>
+                        </form>
+                        <div id="form-status" class="mt-4 text-center hidden">
+                            <p id="status-message" class="text-sm"></p>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Info & Social Links -->
+                    <div class="reveal">
+                        <h3 class="text-2xl font-bold text-white mb-6" data-translate="contactInfoTitle">Informações de Contato</h3>
+                        <div class="space-y-6 mb-8">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-sky-500 rounded-lg flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-white font-semibold">E-mail</h4>
+                                    <p class="text-gray-300">gabrielmilhardo@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-sky-500 rounded-lg flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-white font-semibold" data-translate="locationTitle">Localização</h4>
+                                    <p class="text-gray-300" data-translate="locationText">São Paulo, Brasil</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-sky-500 rounded-lg flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-white"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg>
+                                </div>
+                                <div>
+                                    <h4 class="text-white font-semibold" data-translate="availabilityTitle">Disponibilidade</h4>
+                                    <p class="text-gray-300" data-translate="availabilityText">Aberto para oportunidades</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Social Links -->
+                        <div class="space-y-4">
+                            <h4 class="text-white font-semibold mb-4" data-translate="socialTitle">Redes Sociais</h4>
+                            <div class="flex gap-4">
+                                <a href="mailto:gabrielmilhardo@gmail.com" class="bg-gray-700 text-white p-3 rounded-lg hover:bg-sky-500 transition-colors transform hover:scale-105 flex items-center gap-2" aria-label="Send email">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                    <span data-translate="emailBtn">E-mail</span>
+                                </a>
+                                <a href="https://www.linkedin.com/in/gabriel-milhardo-7b1232243/?trk=opento_sprofile_details" target="_blank" rel="noopener noreferrer" class="bg-gray-700 text-white p-3 rounded-lg hover:bg-sky-500 transition-colors transform hover:scale-105 flex items-center gap-2" aria-label="LinkedIn Profile">
+                                    <i class="devicon-linkedin-plain text-xl"></i>
+                                    <span>LinkedIn</span>
+                                </a>
+                                <a href="https://github.com/GabrielMilhardo1" target="_blank" rel="noopener noreferrer" class="bg-gray-700 text-white p-3 rounded-lg hover:bg-sky-500 transition-colors transform hover:scale-105 flex items-center gap-2" aria-label="GitHub Profile">
+                                    <i class="devicon-github-original text-xl"></i>
+                                    <span>GitHub</span>
+                                </a>
+                            </div>
+                            
+                            <!-- Download CV Button -->
+                            <div class="pt-6">
+                                <a href="#" id="download-cv" class="bg-gradient-to-r from-sky-500 to-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:from-sky-600 hover:to-blue-700 transition-all transform hover:scale-105 flex items-center justify-center gap-3 w-full">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7,10 12,15 17,10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                                    <span data-translate="downloadCvBtn">Download CV</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -294,11 +622,11 @@
                 aboutP1: 'Analista de Dados e IA com forte background em Engenharia de Software e Cloud. Com mais de 3 anos de experiência, sou proficiente em Python para análise e modelagem, e experiente na construção e consumo de APIs RESTful.',
                 aboutP2: 'Possuo vivência prática com o deployment de aplicações (Node.js) em ambientes de produção na AWS (EC2, S3), demonstrando capacidade de gerenciar o ciclo de vida de uma solução de ponta a ponta. Com fluência profissional em inglês, comprovada na condução de projetos técnicos com stakeholders internacionais, busco ativamente posições de Machine Learning Engineer ou Data Scientist onde possa aplicar essa visão integrada para construir e produtizar soluções de dados em escala.',
                 experienceTitle: 'Jornada Profissional',
-                exp1Date: 'Abril 2025 – Presente',
+                exp1Date: 'Abril 2024 – Presente',
                 exp1Role: 'Analista de Dados e Inteligência Artificial',
                 exp1Company: 'Surf Telecom',
                 exp1Desc: 'Liderei o desenvolvimento de uma plataforma web para visualização estratégica de KPIs de chamadas de voz, utilizando Python para extração e tratamento de dados (CDR) e JavaScript para o front-end. Implementei uma solução de monitoramento em tempo real (near real-time) para a gestão de rede.',
-                exp2Date: 'Maio 2023 – Abril 2025',
+                exp2Date: 'Maio 2023 – Abril 2024',
                 exp2Role: 'Analista de Projetos',
                 exp2Company: 'Surf Telecom',
                 exp2Desc: 'Gerenciei a implantação de uma nova plataforma de mensageria (SMS), integrando brokers nacionais e internacionais. Conduzi alinhamentos técnicos e negociações de escopo com parceiros e clientes globais em inglês.',
@@ -321,12 +649,39 @@
                 project1Tech: 'Tecnologias: Python, FastAPI, Scikit-Learn, Docker.',
                 viewGithubBtn: 'Ver no GitHub',
                 liveDemoBtn: 'Live Demo',
-                project2Title: '[A SER DEFINIDO]',
-                project2Desc: 'Projeto focado em MLOps e pipeline de dados na nuvem.',
-                project2Status: 'Status: Em Desenvolvimento',
+                project2Title: 'Pipeline de Dados ETL',
+                project2Desc: 'Pipeline automatizado para extração, transformação e carregamento de dados de CDR (Call Detail Records) para dashboard de KPIs.',
+                project3Title: 'Ferramenta de Web Scraping',
+                project3Desc: 'Sistema automatizado para coleta de dados de múltiplas fontes web com rotação de proxies, tratamento de erros e armazenamento estruturado.',
+                project4Title: 'Deploy Node.js em AWS',
+                project4Desc: 'Aplicação Node.js deployada em ambiente de produção AWS com EC2, S3, Load Balancer e monitoramento CloudWatch.',
+                project5Title: 'Plataforma de Mensageria SMS',
+                project5Desc: 'Integração de plataforma SMS com brokers nacionais e internacionais, incluindo API gateway, rate limiting e monitoramento.',
+                project6Title: 'Pipeline MLOps',
+                project6Desc: 'Pipeline completo de MLOps com CI/CD para modelos de ML, incluindo versionamento, testes automatizados e deploy contínuo.',
+                privateProjectBtn: 'Projeto Privado',
+                comingSoonBtn: 'Em Breve',
                 contactTitle: 'Vamos Conversar?',
                 contactText: 'Estou aberto a novas oportunidades e parcerias. Sinta-se à vontade para entrar em contato.',
                 emailBtn: 'E-mail',
+                contactFormTitle: 'Envie uma Mensagem',
+                nameLabel: 'Nome',
+                namePlaceholder: 'Seu nome completo',
+                emailLabel: 'E-mail',
+                emailPlaceholder: 'seu@email.com',
+                subjectLabel: 'Assunto',
+                subjectPlaceholder: 'Assunto da mensagem',
+                messageLabel: 'Mensagem',
+                messagePlaceholder: 'Escreva sua mensagem aqui...',
+                privacyLabel: 'Concordo em ser contatado por e-mail para assuntos profissionais.',
+                sendBtn: 'Enviar Mensagem',
+                contactInfoTitle: 'Informações de Contato',
+                locationTitle: 'Localização',
+                locationText: 'São Paulo, Brasil',
+                availabilityTitle: 'Disponibilidade',
+                availabilityText: 'Aberto para oportunidades',
+                socialTitle: 'Redes Sociais',
+                downloadCvBtn: 'Download CV',
                 allRightsReserved: 'Todos os direitos reservados.',
                 chatbotTitle: 'Chatbot Gabriel',
                 chatbotWelcome: 'Olá! Sou o chatbot do Gabriel. Pergunte-me sobre ele!',
@@ -367,11 +722,11 @@
                 aboutP1: 'Data and AI Analyst with a strong background in Software Engineering and Cloud. With over 3 years of experience, I am proficient in Python for analysis and modeling, and experienced in building and consuming RESTful APIs.',
                 aboutP2: 'I have practical experience with deploying applications (Node.js) in production environments on AWS (EC2, S3), demonstrating the ability to manage the end-to-end solution lifecycle. With professional fluency in English, proven in leading technical projects with international stakeholders, I actively seek Machine Learning Engineer or Data Scientist positions where I can apply this integrated vision to build and productize data solutions at scale.',
                 experienceTitle: 'Professional Journey',
-                exp1Date: 'April 2025 – Present',
+                exp1Date: 'April 2024 – Present',
                 exp1Role: 'Data and Artificial Intelligence Analyst',
                 exp1Company: 'Surf Telecom',
                 exp1Desc: 'Led the development of a web platform for strategic visualization of voice call KPIs, using Python for data extraction and processing (CDR) and JavaScript for the front-end. Implemented a real-time (near real-time) monitoring solution for network management.',
-                exp2Date: 'May 2023 – April 2025',
+                exp2Date: 'May 2023 – April 2024',
                 exp2Role: 'Project Analyst',
                 exp2Company: 'Surf Telecom',
                 exp2Desc: 'Managed the implementation of a new messaging platform (SMS), integrating national and international brokers. Conducted technical alignments and scope negotiations with global partners and clients in English.',
@@ -394,12 +749,39 @@
                 project1Tech: 'Technologies: Python, FastAPI, Scikit-Learn, Docker.',
                 viewGithubBtn: 'View on GitHub',
                 liveDemoBtn: 'Live Demo',
-                project2Title: '[TO BE DEFINED]',
-                project2Desc: 'Project focused on MLOps and data pipeline in the cloud.',
-                project2Status: 'Status: In Development',
+                project2Title: 'ETL Data Pipeline',
+                project2Desc: 'Automated pipeline for extraction, transformation and loading of CDR (Call Detail Records) data for KPI dashboard.',
+                project3Title: 'Web Scraping Tool',
+                project3Desc: 'Automated system for collecting data from multiple web sources with proxy rotation, error handling and structured storage.',
+                project4Title: 'Node.js AWS Deploy',
+                project4Desc: 'Node.js application deployed in AWS production environment with EC2, S3, Load Balancer and CloudWatch monitoring.',
+                project5Title: 'SMS Messaging Platform',
+                project5Desc: 'SMS platform integration with national and international brokers, including API gateway, rate limiting and monitoring.',
+                project6Title: 'MLOps Pipeline',
+                project6Desc: 'Complete MLOps pipeline with CI/CD for ML models, including versioning, automated testing and continuous deployment.',
+                privateProjectBtn: 'Private Project',
+                comingSoonBtn: 'Coming Soon',
                 contactTitle: 'Let\'s Talk?',
                 contactText: 'I am open to new opportunities and partnerships. Feel free to get in touch.',
                 emailBtn: 'E-mail',
+                contactFormTitle: 'Send a Message',
+                nameLabel: 'Name',
+                namePlaceholder: 'Your full name',
+                emailLabel: 'Email',
+                emailPlaceholder: 'your@email.com',
+                subjectLabel: 'Subject',
+                subjectPlaceholder: 'Message subject',
+                messageLabel: 'Message',
+                messagePlaceholder: 'Write your message here...',
+                privacyLabel: 'I agree to be contacted by email for professional matters.',
+                sendBtn: 'Send Message',
+                contactInfoTitle: 'Contact Information',
+                locationTitle: 'Location',
+                locationText: 'São Paulo, Brazil',
+                availabilityTitle: 'Availability',
+                availabilityText: 'Open for opportunities',
+                socialTitle: 'Social Media',
+                downloadCvBtn: 'Download CV',
                 allRightsReserved: 'All rights reserved.',
                 chatbotTitle: 'Gabriel Chatbot',
                 chatbotWelcome: 'Hello! I am Gabriel\'s chatbot. Ask me about him!',
@@ -513,13 +895,40 @@
             }
         };
 
-        // Mobile menu toggle
+        // Mobile menu toggle with aria-expanded
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
         mobileMenuButton.addEventListener('click', () => {
+            const isExpanded = mobileMenu.classList.contains('hidden');
             mobileMenu.classList.toggle('hidden');
+            mobileMenuButton.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
         });
 
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+        
+        // Initialize theme from localStorage or default to dark
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        body.setAttribute('data-theme', savedTheme);
+        
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = body.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            body.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            
+            // Update colors based on theme
+            if (newTheme === 'light') {
+                body.style.backgroundColor = '#FFFFFF';
+                body.style.color = '#111827';
+            } else {
+                body.style.backgroundColor = '#111827';
+                body.style.color = '#E5E7EB';
+            }
+        });
+        
         // Language switcher
         const langPtButton = document.getElementById('lang-pt');
         const langEnButton = document.getElementById('lang-en');
@@ -551,6 +960,215 @@
             interval: 150
         });
 
+        
+        // Contact form functionality
+        const contactForm = document.getElementById('contact-form');
+        const formStatus = document.getElementById('form-status');
+        const statusMessage = document.getElementById('status-message');
+        
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const formData = new FormData(contactForm);
+            const submitButton = contactForm.querySelector('button[type="submit"]');
+            const originalText = submitButton.innerHTML;
+            
+            // Show loading state
+            submitButton.disabled = true;
+            submitButton.innerHTML = '<svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>Enviando...';
+            
+            try {
+                // Simulate form submission (replace with actual endpoint)
+                await new Promise(resolve => setTimeout(resolve, 2000));
+                
+                // Show success message
+                formStatus.classList.remove('hidden');
+                statusMessage.textContent = 'Mensagem enviada com sucesso! Entrarei em contato em breve.';
+                statusMessage.className = 'text-sm text-green-400';
+                
+                // Reset form
+                contactForm.reset();
+                
+            } catch (error) {
+                // Show error message
+                formStatus.classList.remove('hidden');
+                statusMessage.textContent = 'Erro ao enviar mensagem. Tente novamente ou entre em contato diretamente.';
+                statusMessage.className = 'text-sm text-red-400';
+            } finally {
+                // Reset button
+                submitButton.disabled = false;
+                submitButton.innerHTML = originalText;
+                
+                // Hide status after 5 seconds
+                setTimeout(() => {
+                    formStatus.classList.add('hidden');
+                }, 5000);
+            }
+        });
+        
+        // Download CV functionality (placeholder)
+        document.getElementById('download-cv').addEventListener('click', (e) => {
+            e.preventDefault();
+            alert('CV será disponibilizado em breve! Por enquanto, entre em contato via e-mail.');
+        });
+        
+        // Lazy loading for images
+        const images = document.querySelectorAll('img[loading="lazy"]');
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.src; // Trigger loading
+                    img.classList.remove('opacity-0');
+                    img.classList.add('opacity-100');
+                    observer.unobserve(img);
+                }
+            });
+        });
+        
+        images.forEach(img => {
+            img.classList.add('opacity-0', 'transition-opacity', 'duration-300');
+            imageObserver.observe(img);
+        });
+        
+        // Performance optimization: Preconnect to external domains
+        const preconnectDomains = [
+            'https://cdn.tailwindcss.com',
+            'https://fonts.googleapis.com',
+            'https://cdn.jsdelivr.net',
+            'https://cdnjs.cloudflare.com',
+            'https://images.unsplash.com',
+            'https://flagcdn.com'
+        ];
+        
+        preconnectDomains.forEach(domain => {
+            const link = document.createElement('link');
+            link.rel = 'preconnect';
+            link.href = domain;
+            link.crossOrigin = 'anonymous';
+            document.head.appendChild(link);
+        });
+        
+        // Register Service Worker for PWA
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then((registration) => {
+                        console.log('SW registered: ', registration);
+                        
+                        // Check for updates
+                        registration.addEventListener('updatefound', () => {
+                            const newWorker = registration.installing;
+                            newWorker.addEventListener('statechange', () => {
+                                if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                                    // Show update notification
+                                    showUpdateNotification();
+                                }
+                            });
+                        });
+                    })
+                    .catch((registrationError) => {
+                        console.log('SW registration failed: ', registrationError);
+                    });
+            });
+        }
+        
+        // Show update notification
+        function showUpdateNotification() {
+            const notification = document.createElement('div');
+            notification.className = 'fixed top-4 right-4 bg-sky-600 text-white p-4 rounded-lg shadow-lg z-50 max-w-sm';
+            notification.innerHTML = `
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="font-semibold">Nova versão disponível!</p>
+                        <p class="text-sm opacity-90">Atualize para obter as últimas melhorias.</p>
+                    </div>
+                    <button onclick="location.reload()" class="ml-4 bg-white text-sky-600 px-3 py-1 rounded text-sm font-medium hover:bg-gray-100 transition">
+                        Atualizar
+                    </button>
+                </div>
+                <button onclick="this.parentElement.remove()" class="absolute top-1 right-1 text-white opacity-70 hover:opacity-100">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            `;
+            document.body.appendChild(notification);
+            
+            // Auto-hide after 10 seconds
+            setTimeout(() => {
+                if (notification.parentElement) {
+                    notification.remove();
+                }
+            }, 10000);
+        }
+        
+        // Performance monitoring
+        if ('PerformanceObserver' in window) {
+            // Monitor Core Web Vitals
+            const observer = new PerformanceObserver((list) => {
+                for (const entry of list.getEntries()) {
+                    if (entry.entryType === 'navigation') {
+                        // Track page load time
+                        gtag('event', 'page_load_time', {
+                            'event_category': 'Performance',
+                            'event_label': 'Load Complete',
+                            'value': Math.round(entry.loadEventEnd - entry.fetchStart)
+                        });
+                    }
+                    
+                    if (entry.entryType === 'paint') {
+                        // Track paint metrics
+                        gtag('event', entry.name, {
+                            'event_category': 'Performance',
+                            'event_label': 'Paint Timing',
+                            'value': Math.round(entry.startTime)
+                        });
+                    }
+                }
+            });
+            
+            observer.observe({ entryTypes: ['navigation', 'paint'] });
+        }
+        
+        // Track user interactions
+        document.addEventListener('click', (e) => {
+            const target = e.target.closest('a, button');
+            if (target) {
+                const action = target.getAttribute('data-translate') || target.textContent.trim();
+                gtag('event', 'click', {
+                    'event_category': 'Interaction',
+                    'event_label': action
+                });
+            }
+        });
+        
+        // Track scroll depth
+        let maxScroll = 0;
+        window.addEventListener('scroll', () => {
+            const scrollPercent = Math.round((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100);
+            if (scrollPercent > maxScroll) {
+                maxScroll = scrollPercent;
+                // Track scroll milestones
+                if ([25, 50, 75, 90].includes(scrollPercent)) {
+                    gtag('event', 'scroll_depth', {
+                        'event_category': 'Engagement',
+                        'event_label': `${scrollPercent}%`,
+                        'value': scrollPercent
+                    });
+                }
+            }
+        });
+        
+        // Error tracking
+        window.addEventListener('error', (e) => {
+            gtag('event', 'javascript_error', {
+                'event_category': 'Error',
+                'event_label': e.message,
+                'value': 1
+            });
+        });
         
     </script>
 
