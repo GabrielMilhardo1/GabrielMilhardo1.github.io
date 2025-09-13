@@ -63,15 +63,42 @@
     <style>
         body {
             font-family: 'Sora', sans-serif;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        /* Dark Theme (Default) */
+        [data-theme="dark"] body {
             background-color: #111827;
             color: #E5E7EB;
         }
+        
+        /* Light Theme */
+        [data-theme="light"] body {
+            background-color: #FFFFFF;
+            color: #111827;
+        }
+        /* Navigation Styles */
         .glass-nav {
-            background-color: rgba(17, 24, 39, 0.8);
             backdrop-filter: blur(10px);
+            transition: background-color 0.3s ease;
         }
         .solid-nav {
+            transition: background-color 0.3s ease;
+        }
+        
+        [data-theme="dark"] .glass-nav {
+            background-color: rgba(17, 24, 39, 0.8);
+        }
+        [data-theme="dark"] .solid-nav {
             background-color: #111827;
+        }
+        
+        [data-theme="light"] .glass-nav {
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+        [data-theme="light"] .solid-nav {
+            background-color: #FFFFFF;
+            border-bottom: 1px solid #E5E7EB;
         }
         .typing-cursor {
             border-right: .15em solid #38bdf8;
@@ -92,19 +119,50 @@
             background: #9CA3AF;
         }
         
-        /* Dark mode styles */
+        /* Theme Variables */
         [data-theme="dark"] {
             --bg-primary: #111827;
             --bg-secondary: #1F2937;
+            --bg-card: #374151;
             --text-primary: #E5E7EB;
             --text-secondary: #9CA3AF;
+            --text-accent: #FFFFFF;
+            --border-color: #4B5563;
         }
         
         [data-theme="light"] {
             --bg-primary: #FFFFFF;
             --bg-secondary: #F9FAFB;
+            --bg-card: #FFFFFF;
             --text-primary: #111827;
             --text-secondary: #6B7280;
+            --text-accent: #111827;
+            --border-color: #E5E7EB;
+        }
+        
+        /* Apply theme variables */
+        .bg-gray-800 {
+            background-color: var(--bg-card) !important;
+            transition: background-color 0.3s ease;
+        }
+        
+        .text-white {
+            color: var(--text-accent) !important;
+            transition: color 0.3s ease;
+        }
+        
+        .text-gray-300 {
+            color: var(--text-secondary) !important;
+            transition: color 0.3s ease;
+        }
+        
+        .text-gray-400 {
+            color: var(--text-secondary) !important;
+            transition: color 0.3s ease;
+        }
+        
+        .border-gray-800 {
+            border-color: var(--border-color) !important;
         }
         
         /* Theme toggle button */
@@ -113,30 +171,52 @@
             width: 60px;
             height: 30px;
             border-radius: 15px;
-            background: #374151;
             cursor: pointer;
             transition: all 0.3s ease;
+            border: 2px solid transparent;
         }
         
         .theme-toggle::before {
             content: '';
             position: absolute;
-            top: 3px;
-            left: 3px;
-            width: 24px;
-            height: 24px;
+            top: 2px;
+            left: 2px;
+            width: 22px;
+            height: 22px;
             border-radius: 50%;
-            background: #F3F4F6;
             transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
+        /* Dark theme toggle (moon) */
+        [data-theme="dark"] .theme-toggle {
+            background: #374151;
+        }
+        
+        [data-theme="dark"] .theme-toggle::before {
+            background: #F3F4F6;
+            transform: translateX(0);
+        }
+        
+        /* Light theme toggle (sun) */
         [data-theme="light"] .theme-toggle {
             background: #FCD34D;
         }
         
         [data-theme="light"] .theme-toggle::before {
-            transform: translateX(30px);
             background: #FFFFFF;
+            transform: translateX(26px);
+        }
+        
+        /* Navigation text colors */
+        [data-theme="light"] .text-gray-300 {
+            color: #6B7280 !important;
+        }
+        
+        [data-theme="light"] .text-gray-300:hover {
+            color: #0EA5E9 !important;
         }
     </style>
     
@@ -691,30 +771,6 @@
                 downloadCvBtnPt: 'CV (PT)',
                 downloadCvBtnEn: 'CV (EN)',
                 allRightsReserved: 'Todos os direitos reservados.'
-                chatbotTitle: 'Chatbot Gabriel',
-                chatbotWelcome: 'Olá! Sou o chatbot do Gabriel. Pergunte-me sobre ele!',
-                chatPlaceholder: 'Digite sua pergunta...',
-                chatbotUnknown: 'Desculpe, não entendi sua pergunta. Tente perguntar sobre \'experiência\', \'habilidades\', \'projetos\' ou \'contato\'.',
-                kbName: 'O nome dele é Gabriel Milhardo.',
-                kbWhoIsGabriel: 'Gabriel Milhardo é Analista de Dados e IA com forte background em Engenharia de Software e Cloud, com mais de 3 anos de experiência.',
-                kbExperience: 'Ele tem experiência na Surf Telecom como Analista de Dados e IA, Analista de Projetos e Desenvolvedor.',
-                kbSurfTelecom: 'Na Surf Telecom, ele atuou como Analista de Dados e IA (Abril 2025 – Presente), Analista de Projetos (Maio 2023 – Abril 2025) e Desenvolvedor (Abril 2022 – Maio 2023).',
-                kbSkills: 'Suas habilidades incluem Python, SQL, Node.js, JavaScript, Pandas, Scikit-Learn, Power BI, NumPy, APIs RESTful, Git, Web Scraping, AWS (EC2, S3), Docker, MySQL, Inglês (Fluente) e Português (Nativo).',
-                kbCompetencies: 'Suas competências são em Linguagens (Python, SQL, Node.js, JavaScript), Dados, IA & BI (Pandas, Scikit-Learn, Power BI, NumPy), Engenharia de Software (APIs RESTful, Git, Web Scraping), Cloud & DevOps (AWS, Docker), Bancos de Dados (MySQL) e Idiomas (Inglês, Português).',
-                kbProjects: 'Ele tem um projeto de \'API de Classificação de Risco de Crédito\' e outro projeto \'Em Desenvolvimento\' focado em MLOps e pipeline de dados na nuvem.',
-                kbContact: 'Você pode entrar em contato com Gabriel por e-mail (gabrielmilhardo@gmail.com), LinkedIn (https://www.linkedin.com/in/gabriel-milhardo-7b1232243/) ou GitHub (https://github.com/GabrielMilhardo1).',
-                kbEmail: 'O e-mail de contato do Gabriel é gabrielmilhardo@gmail.com.',
-                kbLinkedIn: 'O LinkedIn do Gabriel é https://www.linkedin.com/in/gabriel-milhardo-7b1232243/.',
-                kbGitHub: 'O GitHub do Gabriel é https://github.com/GabrielMilhardo1.',
-                kbLocation: 'Gabriel está localizado em São Paulo, Brasil.',
-                kbEducation: 'As informações sobre formação não estão detalhadas na página atual.',
-                kbSalary: 'Não tenho informações sobre salário.',
-                kbAge: 'Não tenho informações sobre a idade de Gabriel.',
-                kbHello: 'Olá! Como posso ajudar?',
-                kbHi: 'Oi! Em que posso ser útil?',
-                kbHowAreYou: 'Tudo ótimo! E com você?',
-                kbThanks: 'De nada! Se precisar de mais alguma coisa, é só perguntar.',
-                kbGratitude: 'De nada! Se precisar de mais alguma coisa, é só perguntar.'
             },
             en: {
                 pageTitle: 'Gabriel Milhardo | Data Analyst & Machine Learning Engineer',
@@ -792,31 +848,7 @@
                 downloadCvBtn: 'Download CV',
                 downloadCvBtnPt: 'CV (PT)',
                 downloadCvBtnEn: 'CV (EN)',
-                allRightsReserved: 'All rights reserved.',
-                chatbotTitle: 'Gabriel Chatbot',
-                chatbotWelcome: 'Hello! I am Gabriel\'s chatbot. Ask me about him!',
-                chatPlaceholder: 'Type your question...',
-                chatbotUnknown: 'Sorry, I didn\'t understand your question. Try asking about \'experience\', \'skills\', \'projects\', or \'contact\'.',
-                kbName: 'His name is Gabriel Milhardo.',
-                kbWhoIsGabriel: 'Gabriel Milhardo is a Data and AI Analyst with a strong background in Software Engineering and Cloud, with over 3 years of experience.',
-                kbExperience: 'He has experience at Surf Telecom as a Data and AI Analyst, Project Analyst, and Developer.',
-                kbSurfTelecom: 'At Surf Telecom, he worked as a Data and AI Analyst (April 2025 – Present), Project Analyst (May 2023 – April 2025), and Developer (April 2022 – May 2023).',
-                kbSkills: 'His skills include Python, SQL, Node.js, JavaScript, Pandas, Scikit-Learn, Power BI, NumPy, RESTful APIs, Git, Web Scraping, AWS (EC2, S3), Docker, MySQL, English (Fluent), and Portuguese (Native).',
-                kbCompetencies: 'His competencies are in Languages (Python, SQL, Node.js, JavaScript), Data, AI & BI (Pandas, Scikit-Learn, Power BI, NumPy), Software Engineering (RESTful APIs, Git, Web Scraping), Cloud & DevOps (AWS, Docker), Databases (MySQL), and Languages (English, Portuguese).',
-                kbProjects: 'He has a \'Credit Risk Classification API\' project and another \'In Development\' project focused on MLOps and data pipeline in the cloud.',
-                kbContact: 'You can contact Gabriel via email (gabrielmilhardo@gmail.com), LinkedIn (https://www.linkedin.com/in/gabriel-milhardo-7b1232243/) or GitHub (https://github.com/GabrielMilhardo1).',
-                kbEmail: 'Gabriel\'s contact email is gabrielmilhardo@gmail.com.',
-                kbLinkedIn: 'Gabriel\'s LinkedIn is https://www.linkedin.com/in/gabriel-milhardo-7b1232243/.',
-                kbGitHub: 'Gabriel\'s GitHub is https://github.com/GabrielMilhardo1.',
-                kbLocation: 'Gabriel is located in São Paulo, Brazil.',
-                kbEducation: 'Information about education is not detailed on the current page.',
-                kbSalary: 'I do not have information about salary.',
-                kbAge: 'I do not have information about Gabriel\'s age.',
-                kbHello: 'Hello! How can I help?',
-                kbHi: 'Hi! How can I be useful?',
-                kbHowAreYou: 'All great! And with you?',
-                kbThanks: 'You\'re welcome! If you need anything else, just ask.',
-                kbGratitude: 'You\'re welcome! If you need anything else, just ask.'
+                allRightsReserved: 'All rights reserved.'
             }
         };
 
@@ -851,43 +883,13 @@
                 cursorChar: '|',
             });
 
-            // Update chatbot welcome message
-            const chatbotWelcomeElement = document.querySelector('[data-translate="chatbotWelcome"]');
-            if (chatbotWelcomeElement) {
-                chatbotWelcomeElement.textContent = translations[lang].chatbotWelcome;
-            }
-
-            // Update chatbot knowledge base
-            const currentKnowledgeBase = {};
-            for (const key in translations[lang]) {
-                if (key.startsWith('kb')) {
-                    currentKnowledgeBase[key.substring(2).toLowerCase()] = translations[lang][key];
+            // Update placeholders for form fields
+            document.querySelectorAll('[data-translate-placeholder]').forEach(element => {
+                const key = element.getAttribute('data-translate-placeholder');
+                if (translations[lang][key]) {
+                    element.setAttribute('placeholder', translations[lang][key]);
                 }
-            }
-            // Manually map some common keywords to the new knowledge base
-            knowledgeBase.nome = currentKnowledgeBase.name || translations[lang].kbName;
-            knowledgeBase["quem é gabriel"] = currentKnowledgeBase.whoisgabriel || translations[lang].kbWhoIsGabriel;
-            knowledgeBase.experiencia = currentKnowledgeBase.experience || translations[lang].kbExperience;
-            knowledgeBase["surf telecom"] = currentKnowledgeBase.surftelecom || translations[lang].kbSurfTelecom;
-            knowledgeBase.habilidades = currentKnowledgeBase.skills || translations[lang].kbSkills;
-            knowledgeBase.competencias = currentKnowledgeBase.competencies || translations[lang].kbCompetencies;
-            knowledgeBase.projetos = currentKnowledgeBase.projects || translations[lang].kbProjects;
-            knowledgeBase.contato = currentKnowledgeBase.contact || translations[lang].kbContact;
-            knowledgeBase.email = currentKnowledgeBase.email || translations[lang].kbEmail;
-            knowledgeBase.linkedin = currentKnowledgeBase.linkedin || translations[lang].kbLinkedIn;
-            knowledgeBase.github = currentKnowledgeBase.github || translations[lang].kbGitHub;
-            knowledgeBase.localizacao = currentKnowledgeBase.location || translations[lang].kbLocation;
-            knowledgeBase.formacao = currentKnowledgeBase.education || translations[lang].kbEducation;
-            knowledgeBase.salario = currentKnowledgeBase.salary || translations[lang].kbSalary;
-            knowledgeBase.idade = currentKnowledgeBase.age || translations[lang].kbAge;
-            knowledgeBase.ola = currentKnowledgeBase.hello || translations[lang].kbHello;
-            knowledgeBase.oi = currentKnowledgeBase.hi || translations[lang].kbHi;
-            knowledgeBase["tudo bem"] = currentKnowledgeBase.howareyou || translations[lang].kbHowAreYou;
-            knowledgeBase.obrigado = currentKnowledgeBase.thanks || translations[lang].kbThanks;
-            knowledgeBase.grato = currentKnowledgeBase.gratitude || translations[lang].kbGratitude;
-
-            // Update chatbot unknown message
-            knowledgeBase.unknown = translations[lang].chatbotUnknown;
+            });
 
 
             localStorage.setItem('preferredLang', lang);
